@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/environment":{"guestpath":"/home/vagrant/environment","hostpath":"C:/Users/shale/tech230_visualisation/tech230_multi_machine/environment","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/shale/tech230_visualisation/tech230_multi_machine","disabled":false,"__vagrantfile":true}}}
