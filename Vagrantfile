@@ -35,6 +35,7 @@ Vagrant.configure("2") do |config|
     db.vm.network "private_network", ip:"192.168.10.150" # Makes sure to change the IP address from the app section
 
     db.vm.synced_folder "environment", "/home/vagrant/environment"
+    db.vm.provision "shell", path: "provisionsdb.sh"
   
   end  
 
