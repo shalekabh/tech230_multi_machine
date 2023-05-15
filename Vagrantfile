@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
 
   #SHELL
 
-    app.vm.provision "shell", path: "provisions.sh"
+    app.vm.provision "shell", path: "provisionsapp.sh"
   end  
 
   config.vm.define "db" do |db|
