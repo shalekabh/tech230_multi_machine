@@ -129,7 +129,7 @@ Here:
 Now it should all be automated.
 
 
-The previous code was throwin back errors, so I changed the code and it now works, here is the changed code:
+The previous code was throwing back errors, so I changed the code and it now works, here is the changed code:
 
 ```sudo apt-get update -y```
 ```sudo apt-get upgrade -y```

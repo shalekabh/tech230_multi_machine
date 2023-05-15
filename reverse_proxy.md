@@ -86,8 +86,49 @@ Scroll down until you get to the section that is not commented called "location"
             proxy_set_header Connection 'upgrade';
             proxy_set_header Host $host;
             proxy_cache_bypass $http_upgrade;
-         }```
+         }
+    
+    location /posts {
+            proxy_pass http://localhost:3000/posts;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+    }```
 
 It should look like this:
 
 ![Alt text](pics_for_md/location.png)
+
+Then save and exit:
+
+```Ctrl + x```
+```y```
+```Enter```
+
+Use command : ```sudo nginx -t``` to check for any syntax errors, it should look like :
+
+![Alt text](pics_for_md/syntax.png)
+
+Restart nginx:
+
+```sudo systemctl restart nginx```
+
+Then use:
+
+```npm start``` (Ctrl +z and then bg, to make it run in the background)
+
+And go back to check your page, if the url looks like this:
+
+![Alt text](pics_for_md/no3000.png)
+
+And not this:
+
+![Alt text](pics_for_md/with3000.png)
+
+And you still can see your posts page:
+
+![Alt text](pics_for_md/posts%20page.png)
+
+Then congratulations!
