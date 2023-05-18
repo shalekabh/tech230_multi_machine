@@ -12,3 +12,18 @@ sudo systemctl enable mongod
 sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf
 sudo systemctl restart mongod
 sudo systemctl enable mongod
+
+
+# sudo apt-get update -y
+# sudo apt-get upgrade -y
+# sudo apt install -y mongodb
+# sudo apt-get install -y mongodb-org=3.6.8 mongodb-org-server=3.6.8 mongodb-org->
+# sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5>
+# echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongo>
+# sudo apt-get update -y
+# sudo apt-get upgrade -y
+# sudo systemctl start mongod
+# sudo systemctl enable mongod
+# sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf
+# sudo systemctl restart mongod
+# sudo systemctl enable mongod
