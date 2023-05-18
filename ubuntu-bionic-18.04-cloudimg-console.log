@@ -46,7 +46,7 @@
 [    0.000000] NODE_DATA(0) allocated [mem 0x3ffc5000-0x3ffeffff]
 [    0.000000] kvm-clock: cpu 0, msr 0:3ff44001, primary cpu clock
 [    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
-[    0.000000] kvm-clock: using sched offset of 4620620346 cycles
+[    0.000000] kvm-clock: using sched offset of 6621510339 cycles
 [    0.000000] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
 [    0.000000] Zone ranges:
 [    0.000000]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
@@ -96,384 +96,382 @@
 [    0.004000] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
 [    0.004000] tsc: Detected 1113.602 MHz processor
 [    0.004000] Calibrating delay loop (skipped) preset value.. 2227.20 BogoMIPS (lpj=4454408)
-[    0.004000] pid_max: default: 32768 minimum: 301
-[    0.004000] Security Framework initialized
-[    0.004000] Yama: becoming mindful.
-[    0.008019] AppArmor: AppArmor initialized
-[    0.012000] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
-[    0.016414] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
-[    0.020154] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes)
-[    0.024150] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes)
-[    0.033652] Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
-[    0.036009] Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
-[    0.040010] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
-[    0.044011] Spectre V2 : Mitigation: Enhanced IBRS
-[    0.048008] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
-[    0.052010] RETBleed: Mitigation: Enhanced IBRS
-[    0.056009] Speculative Store Bypass: Vulnerable
-[    0.060000] MMIO Stale Data: Vulnerable: Clear CPU buffers attempted, no microcode
-[    0.060014] SRBDS: Unknown: Dependent on hypervisor status
-[    0.064258] Freeing SMP alternatives memory: 36K
-[    0.220176] APIC calibration not consistent with PM-Timer: 164ms instead of 100ms
-[    0.224000] APIC delta adjusted to PM-Timer: 6335194 (10404187)
-[    0.224498] smpboot: CPU0: Intel(R) Celeron(R) N4500 @ 1.10GHz (family: 0x6, model: 0x9c, stepping: 0x0)
-[    0.228000] Performance Events: unsupported p6 CPU model 156 no PMU driver, software events only.
-[    0.228000] Hierarchical SRCU implementation.
-[    0.228000] NMI watchdog: Perf event create on CPU 0 failed with -2
-[    0.228000] NMI watchdog: Perf NMI watchdog permanently disabled
-[    0.228000] smp: Bringing up secondary CPUs ...
-[    0.228000] x86: Booting SMP configuration:
-[    0.228000] .... node  #0, CPUs:      #1
+[    0.004013] pid_max: default: 32768 minimum: 301
+[    0.008151] Security Framework initialized
+[    0.012012] Yama: becoming mindful.
+[    0.016000] AppArmor: AppArmor initialized
+[    0.020000] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.020000] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+[    0.020000] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.020294] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.024000] Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+[    0.024010] Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+[    0.028000] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.028000] Spectre V2 : Mitigation: Enhanced IBRS
+[    0.028010] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.032010] RETBleed: Mitigation: Enhanced IBRS
+[    0.036009] Speculative Store Bypass: Vulnerable
+[    0.040075] MMIO Stale Data: Vulnerable: Clear CPU buffers attempted, no microcode
+[    0.044011] SRBDS: Unknown: Dependent on hypervisor status
+[    0.048389] Freeing SMP alternatives memory: 36K
+[    0.209316] APIC calibration not consistent with PM-Timer: 181ms instead of 100ms
+[    0.212000] APIC delta adjusted to PM-Timer: 6276945 (11423423)
+[    0.213378] smpboot: CPU0: Intel(R) Celeron(R) N4500 @ 1.10GHz (family: 0x6, model: 0x9c, stepping: 0x0)
+[    0.216000] Performance Events: unsupported p6 CPU model 156 no PMU driver, software events only.
+[    0.216000] Hierarchical SRCU implementation.
+[    0.216000] NMI watchdog: Perf event create on CPU 0 failed with -2
+[    0.216000] NMI watchdog: Perf NMI watchdog permanently disabled
+[    0.216777] smp: Bringing up secondary CPUs ...
+[    0.220000] x86: Booting SMP configuration:
+[    0.220000] .... node  #0, CPUs:      #1
 [    0.004000] kvm-clock: cpu 1, msr 0:3ff44041, secondary cpu clock
-[    0.242244] TSC synchronization [CPU#0 -> CPU#1]:
-[    0.244000] Measured 47159 cycles TSC warp between CPUs, turning off TSC clock.
-[    0.244000] tsc: Marking TSC unstable due to check_tsc_sync_source failed
-[    0.248294] smp: Brought up 1 node, 2 CPUs
-[    0.252017] smpboot: Max logical packages: 1
-[    0.256007] smpboot: Total of 2 processors activated (4454.40 BogoMIPS)
-[    0.260771] devtmpfs: initialized
-[    0.264164] x86/mm: Memory block size: 128MB
-[    0.268493] evm: security.selinux
-[    0.272009] evm: security.SMACK64
-[    0.275125] evm: security.SMACK64EXEC
-[    0.276004] evm: security.SMACK64TRANSMUTE
-[    0.280004] evm: security.SMACK64MMAP
-[    0.284004] evm: security.apparmor
-[    0.288004] evm: security.ima
-[    0.292004] evm: security.capability
-[    0.296389] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
-[    0.308017] futex hash table entries: 512 (order: 3, 32768 bytes)
-[    0.320363] pinctrl core: initialized pinctrl subsystem
-[    0.328217] RTC time: 12:58:29, date: 05/15/23
-[    0.337605] NET: Registered protocol family 16
-[    0.348268] audit: initializing netlink subsys (disabled)
-[    0.356292] audit: type=2000 audit(1684155515.424:1): state=initialized audit_enabled=0 res=1
-[    0.364014] cpuidle: using governor ladder
-[    0.369755] cpuidle: using governor menu
-[    0.369755] ACPI: bus type PCI registered
-[    0.372011] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
-[    0.385428] PCI: Using configuration type 1 for base access
-[    0.404090] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
-[    0.426586] ACPI: Added _OSI(Module Device)
-[    0.436011] ACPI: Added _OSI(Processor Device)
-[    0.444009] ACPI: Added _OSI(3.0 _SCP Extensions)
-[    0.452009] ACPI: Added _OSI(Processor Aggregator Device)
-[    0.460014] ACPI: Added _OSI(Linux-Dell-Video)
-[    0.468013] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
-[    0.476014] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
-[    0.489092] ACPI: Executed 1 blocks of module-level executable AML code
-[    0.507124] ACPI: Interpreter enabled
-[    0.512035] ACPI: (supports S0 S5)
-[    0.517737] ACPI: Using IOAPIC for interrupt routing
-[    0.524531] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
-[    0.536350] ACPI: Enabled 2 GPEs in block 00 to 07
-[    0.558532] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
-[    0.564030] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
-[    0.576978] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
-[    0.588037] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
-[    0.600964] PCI host bridge to bus 0000:00
-[    0.608014] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
-[    0.616012] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
-[    0.624015] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
-[    0.632016] pci_bus 0000:00: root bus resource [mem 0x40000000-0xfdffffff window]
-[    0.648015] pci_bus 0000:00: root bus resource [bus 00-ff]
-[    0.662904] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
-[    0.672014] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
-[    0.684013] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
-[    0.692014] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
-[    0.734696] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
-[    0.744057] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
-[    0.772368] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
-[    0.776973] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
-[    0.784252] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
-[    0.792302] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
-[    0.796949] SCSI subsystem initialized
-[    0.806490] pci 0000:00:02.0: vgaarb: setting as boot VGA device
-[    0.808000] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
-[    0.824023] pci 0000:00:02.0: vgaarb: bridge control possible
-[    0.832014] vgaarb: loaded
-[    0.836166] ACPI: bus type USB registered
-[    0.844052] usbcore: registered new interface driver usbfs
-[    0.848042] usbcore: registered new interface driver hub
-[    0.856134] usbcore: registered new device driver usb
-[    0.864486] EDAC MC: Ver: 3.0.0
-[    0.868352] PCI: Using ACPI for IRQ routing
-[    0.872929] NetLabel: Initializing
-[    0.880004] NetLabel:  domain hash size = 128
-[    0.884009] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
-[    0.892143] NetLabel:  unlabeled traffic allowed by default
-[    0.900011] clocksource: Switched to clocksource kvm-clock
-[    0.952358] VFS: Disk quotas dquot_6.6.0
-[    0.960440] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
-[    0.969140] AppArmor: AppArmor Filesystem Enabled
-[    0.973970] pnp: PnP ACPI init
-[    0.979911] pnp: PnP ACPI: found 3 devices
-[    0.994772] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
-[    1.004794] NET: Registered protocol family 2
-[    1.011085] IP idents hash table entries: 16384 (order: 5, 131072 bytes)
-[    1.017841] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
-[    1.024956] TCP bind hash table entries: 8192 (order: 5, 131072 bytes)
-[    1.032216] TCP: Hash tables configured (established 8192 bind 8192)
-[    1.039756] UDP hash table entries: 512 (order: 2, 16384 bytes)
-[    1.046533] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
-[    1.053096] NET: Registered protocol family 1
-[    1.057630] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
-[    1.063577] pci 0000:00:01.0: Activating ISA DMA hang workarounds
-[    1.069989] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
-[    1.078808] Unpacking initramfs...
-[    1.930795] Freeing initrd memory: 19532K
-[    1.935446] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x100d4ab1989, max_idle_ns: 440795213972 ns
-[    1.945956] platform rtc_cmos: registered platform RTC device (no PNP device found)
-[    1.954487] Scanning for low memory corruption every 60 seconds
-[    1.962207] Initialise system trusted keyrings
-[    1.967352] Key type blacklist registered
-[    1.973176] workingset: timestamp_bits=36 max_order=18 bucket_order=0
-[    1.982993] zbud: loaded
-[    1.987585] squashfs: version 4.0 (2009/01/31) Phillip Lougher
-[    1.994630] fuse init (API version 7.26)
-[    2.021406] Key type asymmetric registered
-[    2.025713] Asymmetric key parser 'x509' registered
-[    2.030559] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
-[    2.039323] io scheduler noop registered
-[    2.043455] io scheduler deadline registered
-[    2.047835] io scheduler cfq registered (default)
-[    2.053890] ACPI: AC Adapter [AC] (on-line)
-[    2.058160] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
-[    2.065551] ACPI: Power Button [PWRF]
-[    2.069515] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
-[    2.076814] ACPI: Sleep Button [SLPF]
-[    2.081508] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
-[    2.082944] ACPI: Battery Slot [BAT0] (battery present)
-[    2.122191] 00:02: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
-[    2.133119] Linux agpgart interface v0.103
-[    2.147298] loop: module loaded
-[    2.154777] scsi host0: ata_piix
-[    2.160137] scsi host1: ata_piix
-[    2.163657] ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
-[    2.170522] ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
-[    2.177463] tun: Universal TUN/TAP device driver, 1.6
-[    2.183058] PPP generic driver version 2.4.2
-[    2.187848] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
-[    2.194227] ehci-pci: EHCI PCI platform driver
-[    2.198794] ehci-platform: EHCI generic platform driver
-[    2.204401] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
-[    2.210405] ohci-pci: OHCI PCI platform driver
-[    2.214946] ohci-platform: OHCI generic platform driver
-[    2.220963] uhci_hcd: USB Universal Host Controller Interface driver
-[    2.227591] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
-[    2.239194] serio: i8042 KBD port at 0x60,0x64 irq 1
-[    2.244509] serio: i8042 AUX port at 0x60,0x64 irq 12
-[    2.250760] mousedev: PS/2 mouse device common for all mice
-[    2.258455] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
-[    2.270451] rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
-[    2.276996] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
-[    2.282939] i2c /dev entries driver
-[    2.286568] device-mapper: uevent: version 1.0.3
-[    2.292470] device-mapper: ioctl: 4.37.0-ioctl (2017-09-20) initialised: dm-devel@redhat.com
-[    2.301122] ledtrig-cpu: registered to indicate activity on CPUs
-[    2.310778] NET: Registered protocol family 10
-[    2.334514] Segment Routing with IPv6
-[    2.360220] NET: Registered protocol family 17
-[    2.411237] Key type dns_resolver registered
-[    2.417834] mce: Using 0 MCE banks
-[    2.422152] RAS: Correctable Errors collector initialized.
-[    2.428902] sched_clock: Marking stable (2428800673, 0)->(3284099222, -855298549)
-[    2.448266] registered taskstats version 1
-[    2.455332] Loading compiled-in X.509 certificates
-[    2.473851] Loaded X.509 cert 'Build time autogenerated kernel key: 53bf99db7da04c05fe17f7beec9ce15c83db2223'
-[    2.486838] Loaded X.509 cert 'Canonical Ltd. Live Patch Signing: 14df34d1a87cf37625abec039ef2bf521249b969'
-[    2.507398] Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing: 88f752e560a1e0737e31163a466ad7b70a850c19'
-[    2.521914] blacklist: Loading compiled-in revocation X.509 certificates
-[    2.530571] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing: 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
-[    2.547363] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2017): 242ade75ac4a15e50d50c84b0d45ff3eae707a03'
-[    2.561675] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (ESM 2018): 365188c1d374d6b07c3c8f240f8ef722433d6a8b'
-[    2.575077] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2019): c0746fd6c5da3ae827864651ad66ae47fe24b3e8'
-[    2.591152] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v1): a8d54bbb3825cfb94fa13c9f8a594a195c107b8d'
-[    2.605314] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v2): 4cf046892d6fd3c9a5b03f98d845f90851dc6a8c'
-[    2.618545] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v3): 100437bb6de6e469b581e61cd66bce3ef4ed53af'
-[    2.651381] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (Ubuntu Core 2019): c1d57b8f6b743f23ee41f4f7ee292f06eecadfb9'
-[    2.664836] zswap: loaded using pool lzo/zbud
-[    2.712419] Key type big_key registered
-[    2.719769] Key type trusted registered
-[    2.733797] Key type encrypted registered
-[    2.739150] AppArmor: AppArmor sha1 policy hashing enabled
-[    2.744791] ima: No TPM chip found, activating TPM-bypass! (rc=-19)
-[    2.752884] ima: Allocated hash algorithm: sha1
-[    2.758575] evm: HMAC attrs: 0x1
-[    2.763483]   Magic number: 7:834:986
-[    2.769552] rtc_cmos rtc_cmos: setting system clock to 2023-05-15 12:58:32 UTC (1684155512)
-[    2.782118] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
-[    2.789660] EDD information not available.
-[    2.801524] Freeing unused kernel image memory: 2480K
-[    2.833139] Write protecting the kernel read-only data: 20480k
-[    2.841205] Freeing unused kernel image memory: 2008K
-[    2.846476] Freeing unused kernel image memory: 1820K
-[    2.857836] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    0.240000] TSC synchronization [CPU#0 -> CPU#1]:
+[    0.240000] Measured 36175 cycles TSC warp between CPUs, turning off TSC clock.
+[    0.240000] tsc: Marking TSC unstable due to check_tsc_sync_source failed
+[    0.248306] smp: Brought up 1 node, 2 CPUs
+[    0.252102] smpboot: Max logical packages: 1
+[    0.256013] smpboot: Total of 2 processors activated (4454.40 BogoMIPS)
+[    0.268007] devtmpfs: initialized
+[    0.272026] x86/mm: Memory block size: 128MB
+[    0.276574] evm: security.selinux
+[    0.280011] evm: security.SMACK64
+[    0.284010] evm: security.SMACK64EXEC
+[    0.288010] evm: security.SMACK64TRANSMUTE
+[    0.292009] evm: security.SMACK64MMAP
+[    0.296009] evm: security.apparmor
+[    0.300010] evm: security.ima
+[    0.304011] evm: security.capability
+[    0.312308] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.316030] futex hash table entries: 512 (order: 3, 32768 bytes)
+[    0.320440] pinctrl core: initialized pinctrl subsystem
+[    0.328855] RTC time: 10:45:35, date: 05/17/23
+[    0.336000] NET: Registered protocol family 16
+[    0.336227] audit: initializing netlink subsys (disabled)
+[    0.348136] audit: type=2000 audit(1684320342.660:1): state=initialized audit_enabled=0 res=1
+[    0.358577] cpuidle: using governor ladder
+[    0.364313] cpuidle: using governor menu
+[    0.372246] ACPI: bus type PCI registered
+[    0.380013] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.401936] PCI: Using configuration type 1 for base access
+[    0.424111] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.448187] ACPI: Added _OSI(Module Device)
+[    0.460013] ACPI: Added _OSI(Processor Device)
+[    0.472011] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.484011] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.492014] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.504012] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.516017] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+[    0.528895] ACPI: Executed 1 blocks of module-level executable AML code
+[    0.553380] ACPI: Interpreter enabled
+[    0.564048] ACPI: (supports S0 S5)
+[    0.572005] ACPI: Using IOAPIC for interrupt routing
+[    0.584555] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.608351] ACPI: Enabled 2 GPEs in block 00 to 07
+[    0.648883] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.664069] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
+[    0.680523] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    0.700038] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[    0.725425] PCI host bridge to bus 0000:00
+[    0.736014] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.748016] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.764018] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.784014] pci_bus 0000:00: root bus resource [mem 0x40000000-0xfdffffff window]
+[    0.796017] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.824422] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    0.840015] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    0.856015] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    0.868013] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    0.932224] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+[    0.948059] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+[    0.988713] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+[    0.988713] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
+[    1.008305] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
+[    1.016286] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
+[    1.024834] SCSI subsystem initialized
+[    1.032303] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    1.036000] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    1.048015] pci 0000:00:02.0: vgaarb: bridge control possible
+[    1.056005] vgaarb: loaded
+[    1.060162] ACPI: bus type USB registered
+[    1.068048] usbcore: registered new interface driver usbfs
+[    1.076073] usbcore: registered new interface driver hub
+[    1.088045] usbcore: registered new device driver usb
+[    1.104033] EDAC MC: Ver: 3.0.0
+[    1.116123] PCI: Using ACPI for IRQ routing
+[    1.125119] NetLabel: Initializing
+[    1.132009] NetLabel:  domain hash size = 128
+[    1.140008] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    1.152043] NetLabel:  unlabeled traffic allowed by default
+[    1.174031] clocksource: Switched to clocksource kvm-clock
+[    1.308052] VFS: Disk quotas dquot_6.6.0
+[    1.312644] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.320229] AppArmor: AppArmor Filesystem Enabled
+[    1.324974] pnp: PnP ACPI init
+[    1.349602] pnp: PnP ACPI: found 3 devices
+[    1.366677] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    1.376573] NET: Registered protocol family 2
+[    1.410775] IP idents hash table entries: 16384 (order: 5, 131072 bytes)
+[    1.426820] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+[    1.436417] TCP bind hash table entries: 8192 (order: 5, 131072 bytes)
+[    1.452115] TCP: Hash tables configured (established 8192 bind 8192)
+[    1.461614] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    1.469899] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    1.477460] NET: Registered protocol family 1
+[    1.484826] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    1.549831] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    1.556802] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    1.568984] Unpacking initramfs...
+[    2.208883] Freeing initrd memory: 19532K
+[    2.784388] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x100d4ab1989, max_idle_ns: 440795213972 ns
+[    2.810665] platform rtc_cmos: registered platform RTC device (no PNP device found)
+[    2.826953] Scanning for low memory corruption every 60 seconds
+[    2.839015] Initialise system trusted keyrings
+[    2.847315] Key type blacklist registered
+[    2.849376] workingset: timestamp_bits=36 max_order=18 bucket_order=0
+[    2.849376] zbud: loaded
+[    2.849376] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    2.878255] fuse init (API version 7.26)
+[    2.964121] Key type asymmetric registered
+[    2.968496] Asymmetric key parser 'x509' registered
+[    2.973966] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    2.989892] io scheduler noop registered
+[    2.993154] io scheduler deadline registered
+[    2.993154] io scheduler cfq registered (default)
+[    3.017082] ACPI: AC Adapter [AC] (on-line)
+[    3.023285] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    3.038918] ACPI: Power Button [PWRF]
+[    3.045101] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[    3.056330] ACPI: Sleep Button [SLPF]
+[    3.066173] ACPI: Battery Slot [BAT0] (battery present)
+[    3.074903] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    3.118992] 00:02: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    3.169312] Linux agpgart interface v0.103
+[    3.190113] loop: module loaded
+[    3.202391] scsi host0: ata_piix
+[    3.204365] scsi host1: ata_piix
+[    3.204365] ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+[    3.204365] ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+[    3.204365] tun: Universal TUN/TAP device driver, 1.6
+[    3.238115] PPP generic driver version 2.4.2
+[    3.243815] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    3.251540] ehci-pci: EHCI PCI platform driver
+[    3.256275] ehci-platform: EHCI generic platform driver
+[    3.261550] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    3.268502] ohci-pci: OHCI PCI platform driver
+[    3.276735] ohci-platform: OHCI generic platform driver
+[    3.282537] uhci_hcd: USB Universal Host Controller Interface driver
+[    3.289377] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+[    3.302850] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    3.313651] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    3.320914] mousedev: PS/2 mouse device common for all mice
+[    3.333990] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+[    3.342692] rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
+[    3.353629] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+[    3.360249] i2c /dev entries driver
+[    3.365539] device-mapper: uevent: version 1.0.3
+[    3.371619] device-mapper: ioctl: 4.37.0-ioctl (2017-09-20) initialised: dm-devel@redhat.com
+[    3.383869] ledtrig-cpu: registered to indicate activity on CPUs
+[    3.427619] NET: Registered protocol family 10
+[    3.560259] Segment Routing with IPv6
+[    3.568075] NET: Registered protocol family 17
+[    3.575870] Key type dns_resolver registered
+[    3.585698] mce: Using 0 MCE banks
+[    3.590453] RAS: Correctable Errors collector initialized.
+[    3.596921] sched_clock: Marking stable (3596816872, 0)->(5259404819, -1662587947)
+[    3.614605] registered taskstats version 1
+[    3.623578] Loading compiled-in X.509 certificates
+[    3.651085] Loaded X.509 cert 'Build time autogenerated kernel key: 53bf99db7da04c05fe17f7beec9ce15c83db2223'
+[    3.665923] Loaded X.509 cert 'Canonical Ltd. Live Patch Signing: 14df34d1a87cf37625abec039ef2bf521249b969'
+[    3.682373] Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing: 88f752e560a1e0737e31163a466ad7b70a850c19'
+[    3.695135] blacklist: Loading compiled-in revocation X.509 certificates
+[    3.703661] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing: 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
+[    3.717019] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2017): 242ade75ac4a15e50d50c84b0d45ff3eae707a03'
+[    3.730918] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (ESM 2018): 365188c1d374d6b07c3c8f240f8ef722433d6a8b'
+[    3.744509] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2019): c0746fd6c5da3ae827864651ad66ae47fe24b3e8'
+[    3.758250] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v1): a8d54bbb3825cfb94fa13c9f8a594a195c107b8d'
+[    3.786951] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v2): 4cf046892d6fd3c9a5b03f98d845f90851dc6a8c'
+[    3.804987] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v3): 100437bb6de6e469b581e61cd66bce3ef4ed53af'
+[    3.820546] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (Ubuntu Core 2019): c1d57b8f6b743f23ee41f4f7ee292f06eecadfb9'
+[    3.842744] zswap: loaded using pool lzo/zbud
+[    3.882718] Key type big_key registered
+[    3.889581] Key type trusted registered
+[    3.904828] Key type encrypted registered
+[    3.909451] AppArmor: AppArmor sha1 policy hashing enabled
+[    3.919480] ima: No TPM chip found, activating TPM-bypass! (rc=-19)
+[    3.927714] ima: Allocated hash algorithm: sha1
+[    3.935098] evm: HMAC attrs: 0x1
+[    3.940874]   Magic number: 7:566:780
+[    3.948445] rtc_cmos rtc_cmos: setting system clock to 2023-05-17 10:45:39 UTC (1684320339)
+[    3.960195] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
+[    3.972406] EDD information not available.
+[    3.984928] Freeing unused kernel image memory: 2480K
+[    4.016506] Write protecting the kernel read-only data: 20480k
+[    4.026788] Freeing unused kernel image memory: 2008K
+[    4.033419] Freeing unused kernel image memory: 1820K
+[    4.048240] x86/mm: Checked W+X mappings: passed, no W+X pages found.
 Loading, please wait...
 starting version 237
-[    2.978447] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
-[    2.986623] e1000: Copyright (c) 1999-2006 Intel Corporation.
-[    2.997710] Fusion MPT base driver 3.04.20
-[    3.001879] Copyright (c) 1999-2008 LSI Corporation
-[    3.071952] SSE version of gcm_enc/dec engaged.
-[    3.078047] Fusion MPT SPI Host driver 3.04.20
-[    3.271472] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input4
-[    4.166761] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 02:3e:6f:b6:28:d7
-[    4.173883] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
-[    5.072022] e1000 0000:00:08.0 eth1: (PCI:33MHz:32-bit) 08:00:27:31:b9:b6
-[    5.078912] e1000 0000:00:08.0 eth1: Intel(R) PRO/1000 Network Connection
-[    5.092992] e1000 0000:00:03.0 enp0s3: renamed from eth0
-[    5.098220] mptbase: ioc0: Initiating bringup
-[    6.655412] e1000 0000:00:08.0 enp0s8: renamed from eth1
-[    6.803578] ioc0: LSI53C1030 A0: Capabilities={Initiator}
-[    7.082972] scsi host2: ioc0: LSI53C1030 A0, FwRev=00000000h, Ports=1, MaxQ=256, IRQ=20
-[    7.265518] scsi 2:0:0:0: Direct-Access     VBOX     HARDDISK         1.0  PQ: 0 ANSI: 5
-[    7.304248] scsi target2:0:0: Beginning Domain Validation
-[    7.321773] scsi target2:0:0: Domain Validation skipping write tests
-[    7.329258] scsi target2:0:0: Ending Domain Validation
-[    7.335420] scsi target2:0:0: asynchronous
-[    7.344658] scsi 2:0:1:0: Direct-Access     VBOX     HARDDISK         1.0  PQ: 0 ANSI: 5
-[    7.384688] scsi target2:0:1: Beginning Domain Validation
-[    7.399952] scsi target2:0:1: Domain Validation skipping write tests
-[    7.406145] scsi target2:0:1: Ending Domain Validation
-[    7.411868] scsi target2:0:1: asynchronous
-[    7.432460] sd 2:0:0:0: Attached scsi generic sg0 type 0
-[    7.433817] sd 2:0:0:0: [sda] 83886080 512-byte logical blocks: (42.9 GB/40.0 GiB)
-[    7.437986] sd 2:0:1:0: Attached scsi generic sg1 type 0
-[    7.446888] sd 2:0:1:0: [sdb] 20480 512-byte logical blocks: (10.5 MB/10.0 MiB)
-[    7.462861] sd 2:0:0:0: [sda] Write Protect is off
-[    7.463360] sd 2:0:1:0: [sdb] Write Protect is off
-[    7.474074] sd 2:0:1:0: [sdb] Incomplete mode parameter data
-[    7.477185] sd 2:0:0:0: [sda] Incomplete mode parameter data
-[    7.479516] sd 2:0:1:0: [sdb] Assuming drive cache: write through
-[    7.484997] sd 2:0:0:0: [sda] Assuming drive cache: write through
-[    7.519230]  sda: sda1
-[    7.528003] sd 2:0:1:0: [sdb] Attached SCSI disk
-[    7.529026] sd 2:0:0:0: [sda] Attached SCSI disk
-Begin: Loading essential drivers ... [   10.120451] raid6: sse2x1   gen()  7279 MB/s
-[   10.172753] raid6: sse2x1   xor()  4913 MB/s
-[   10.220636] raid6: sse2x2   gen()  9783 MB/s
-[   10.272078] raid6: sse2x2   xor()  5772 MB/s
-[   10.324516] raid6: sse2x4   gen()  9940 MB/s
-[   10.376142] raid6: sse2x4   xor()  5366 MB/s
-[   10.380261] raid6: using algorithm sse2x4 gen() 9940 MB/s
-[   10.386176] raid6: .... xor() 5366 MB/s, rmw enabled
-[   10.391469] raid6: using ssse3x2 recovery algorithm
-[   10.400141] xor: measuring software checksum speed
-[   10.445516]    prefetch64-sse: 14271.000 MB/sec
-[   10.488546]    generic_sse: 11805.000 MB/sec
-[   10.493316] xor: using function: prefetch64-sse (14271.000 MB/sec)
-[   10.502875] async_tx: api initialized (async)
+[    4.321411] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+[    4.331255] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    4.372393] Fusion MPT base driver 3.04.20
+[    4.377579] Copyright (c) 1999-2008 LSI Corporation
+[    4.529941] SSE version of gcm_enc/dec engaged.
+[    4.595888] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input4
+[    4.617006] Fusion MPT SPI Host driver 3.04.20
+[    5.300765] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 02:3e:6f:b6:28:d7
+[    5.307269] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+[    5.318245] mptbase: ioc0: Initiating bringup
+[    5.456794] ioc0: LSI53C1030 A0: Capabilities={Initiator}
+[    6.502031] scsi host2: ioc0: LSI53C1030 A0, FwRev=00000000h, Ports=1, MaxQ=256, IRQ=20
+[    7.069699] scsi 2:0:0:0: Direct-Access     VBOX     HARDDISK         1.0  PQ: 0 ANSI: 5
+[    7.111369] scsi target2:0:0: Beginning Domain Validation
+[    7.123217] scsi target2:0:0: Domain Validation skipping write tests
+[    7.134420] scsi target2:0:0: Ending Domain Validation
+[    7.139618] scsi target2:0:0: asynchronous
+[    7.147437] scsi 2:0:1:0: Direct-Access     VBOX     HARDDISK         1.0  PQ: 0 ANSI: 5
+[    7.400226] scsi target2:0:1: Beginning Domain Validation
+[    7.411533] scsi target2:0:1: Domain Validation skipping write tests
+[    7.418185] scsi target2:0:1: Ending Domain Validation
+[    7.423454] scsi target2:0:1: asynchronous
+[    7.445299] sd 2:0:0:0: [sda] 83886080 512-byte logical blocks: (42.9 GB/40.0 GiB)
+[    7.453154] sd 2:0:0:0: Attached scsi generic sg0 type 0
+[    7.459289] sd 2:0:0:0: [sda] Write Protect is off
+[    7.466156] sd 2:0:1:0: [sdb] 20480 512-byte logical blocks: (10.5 MB/10.0 MiB)
+[    7.473994] sd 2:0:1:0: Attached scsi generic sg1 type 0
+[    7.480679] sd 2:0:1:0: [sdb] Write Protect is off
+[    7.485835] sd 2:0:0:0: [sda] Incomplete mode parameter data
+[    7.491660] sd 2:0:0:0: [sda] Assuming drive cache: write through
+[    7.499796] sd 2:0:1:0: [sdb] Incomplete mode parameter data
+[    7.505566] sd 2:0:1:0: [sdb] Assuming drive cache: write through
+[    7.522130]  sda: sda1
+[    7.532166] sd 2:0:0:0: [sda] Attached SCSI disk
+[    7.543621] sd 2:0:1:0: [sdb] Attached SCSI disk
+[    7.907585] e1000 0000:00:08.0 eth1: (PCI:33MHz:32-bit) 08:00:27:9d:e5:ae
+[    7.916515] e1000 0000:00:08.0 eth1: Intel(R) PRO/1000 Network Connection
+[    7.927383] e1000 0000:00:08.0 enp0s8: renamed from eth1
+[    7.966626] e1000 0000:00:03.0 enp0s3: renamed from eth0
+Begin: Loading essential drivers ... [   12.053434] raid6: sse2x1   gen() 65036 MB/s
+[   14.058803] raid6: sse2x1   xor() 113082 MB/s
+[   15.056926] raid6: sse2x2   gen() 224123 MB/s
+[   16.050156] raid6: sse2x2   xor() 130966 MB/s
+[   17.096793] raid6: sse2x4   gen()  9870 MB/s
+[   17.148283] raid6: sse2x4   xor()  5312 MB/s
+[   17.152692] raid6: using algorithm sse2x2 gen() 224123 MB/s
+[   17.158075] raid6: .... xor() 130966 MB/s, rmw enabled
+[   17.163309] raid6: using ssse3x2 recovery algorithm
+[   17.171220] xor: measuring software checksum speed
+[   17.212332]    prefetch64-sse: 11904.000 MB/sec
+[   17.257091]    generic_sse: 11210.000 MB/sec
+[   17.262402] xor: using function: prefetch64-sse (11904.000 MB/sec)
+[   17.273334] async_tx: api initialized (async)
 done.
 Begin: Running /scripts/init-premount ... done.
 Begin: Mounting root file system ... Begin: Running /scripts/local-top ... done.
-Begin: Running /scripts/local-premount ... [   10.612562] Btrfs loaded, crc32c=crc32c-intel
+Begin: Running /scripts/local-premount ... [   17.385538] Btrfs loaded, crc32c=crc32c-intel
 Scanning for Btrfs filesystems
 done.
 Warning: fsck not present, so skipping root file system
-[   10.705680] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+[   17.470540] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
 done.
 Begin: Running /scripts/local-bottom ... done.
 Begin: Running /scripts/init-bottom ... done.
-[   11.121250] ip_tables: (C) 2000-2006 Netfilter Core Team
-[   11.163271] systemd[1]: systemd 237 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
-[   11.187620] systemd[1]: Detected virtualization oracle.
-[   11.193000] systemd[1]: Detected architecture x86-64.
+[   17.924407] ip_tables: (C) 2000-2006 Netfilter Core Team
+[   17.976721] systemd[1]: systemd 237 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
+[   17.997861] systemd[1]: Detected virtualization oracle.
+[   18.004825] systemd[1]: Detected architecture x86-64.
 
 Welcome to [1mUbuntu 18.04.6 LTS[0m!
 
-[   11.232392] systemd[1]: Set hostname to <ubuntu>.
-[   11.245942] systemd[1]: Initializing machine ID from random generator.
-[   11.252507] systemd[1]: Installed transient /etc/machine-id file.
-[   11.839861] systemd[1]: Reached target User and Group Name Lookups.
+[   18.055621] systemd[1]: Set hostname to <ubuntu>.
+[   18.070574] systemd[1]: Initializing machine ID from random generator.
+[   18.078503] systemd[1]: Installed transient /etc/machine-id file.
+[   18.722305] systemd[1]: Reached target User and Group Name Lookups.
 [[0;32m  OK  [0m] Reached target User and Group Name Lookups.
-[   11.862138] systemd[1]: Created slice User and Session Slice.
-[[0;32m  OK  [0m] Created slice User and Session Slice.
-[   11.871872] systemd[1]: Reached target Swap.
+[   18.733911] systemd[1]: Reached target Swap.
 [[0;32m  OK  [0m] Reached target Swap.
-[   11.880417] systemd[1]: Reached target Mounting snaps.
+[   18.754844] systemd[1]: Created slice User and Session Slice.
+[[0;32m  OK  [0m] Created slice User and Session Slice.
+[   18.765145] systemd[1]: Reached target Mounting snaps.
 [[0;32m  OK  [0m] Reached target Mounting snaps.
-[[0;32m  OK  [0m] Started Forward Password Requests to Wall Directory Watch.
-[[0;32m  OK  [0m] Set up automount Arbitrary Executab…rmats File System Automount Point.
 [[0;32m  OK  [0m] Reached target Mounted snaps.
+[[0;32m  OK  [0m] Set up automount Arbitrary Executab…rmats File System Automount Point.
 [[0;32m  OK  [0m] Reached target System Time Synchronized.
+[[0;32m  OK  [0m] Started Forward Password Requests to Wall Directory Watch.
 [[0;32m  OK  [0m] Created slice System Slice.
+[[0;32m  OK  [0m] Listening on LVM2 metadata daemon socket.
+[[0;32m  OK  [0m] Listening on /dev/initctl Compatibility Named Pipe.
+[[0;32m  OK  [0m] Reached target Slices.
 [[0;32m  OK  [0m] Listening on Journal Socket (/dev/log).
-[[0;32m  OK  [0m] Listening on Syslog Socket.
-[[0;32m  OK  [0m] Listening on Network Service Netlink Socket.
-[[0;32m  OK  [0m] Listening on fsck to fsckd communication Socket.
-[[0;32m  OK  [0m] Listening on Journal Socket.
-         Starting Uncomplicated firewall...
-         Starting Set the console keyboard layout...
-         Starting Create list of required st…ce nodes for the current kernel...
-         Starting Load Kernel Modules...
-         Mounting Kernel Debug File System...
-[[0;32m  OK  [0m] Listening on Device-mapper event daemon FIFOs.
-[   12.005648] Loading iSCSI transport class v2.0-870.
-         Starting File System Check on Root Device...
 [[0;32m  OK  [0m] Listening on LVM2 poll daemon socket.
+[[0;32m  OK  [0m] Listening on Journal Socket.
+         Mounting Kernel Debug File System...
+         Mounting Huge Pages File System...
+         Starting Load Kernel Modules...
+[[0;32m  OK  [0m] Listening on Device-mapper event daemon FIFOs.
+         Starting Monitoring of LVM2 mirrors…ng dmeventd or progress polling...
+[[0;32m  OK  [0m] Listening on Syslog Socket.
+         Starting Set the console keyboard layout...
+[   18.886960] Loading iSCSI transport class v2.0-870.
+[[0;32m  OK  [0m] Listening on Network Service Netlink Socket.
+[[0;32m  OK  [0m] Listening on udev Control Socket.
+         Mounting POSIX Message Queue File System...
+[[0;32m  OK  [0m] Listening on udev Kernel Socket.
+         Starting Uncomplicated firewall...
+[[0;32m  OK  [0m] Created slice system-serial\x2dgetty.slice.
 [[0;32m  OK  [0m] Listening on Journal Audit Socket.
          Starting Journal Service...
-[[0;32m  OK  [0m] Listening on udev Kernel Socket.
-[[0;32m  OK  [0m] Reached target Slices.
-         Mounting Huge Pages File System...[   12.072977] iscsi: registered transport (tcp)
-
-[[0;32m  OK  [0m] Listening on LVM2 metadata daemon socket.
-         Starting Monitoring of LVM2 mirrors…ng dmeventd or progress polling...
-         Mounting POSIX Message Queue File System...
-[[0;32m  OK  [0m] Created slice system-serial\x2dgetty.slice.
-[[0;32m  OK  [0m] Listening on udev Control Socket.
+[[0;32m  OK  [0m] Listening on fsck to fsckd communication Socket.
+         Starting File System Check on Root Device...
+         Starting Create list of required st…ce nodes for the current kernel...
          Starting udev Coldplug all Devices...
-[[0;32m  OK  [0m] Listening on /dev/initctl Compatibility Named Pipe.
-[[0;32m  OK  [0m] Started Uncomplicated firewall.
-[[0;32m  OK  [0m] Started Create list of required sta…vice nodes for the current kernel.
-[[0;32m  OK  [0m] Mounted Kernel Debug File System.
+[[0;32m  OK  [0m] [   19.009437] iscsi: registered transport (tcp)
+Mounted Kernel Debug File System.
 [[0;32m  OK  [0m] Mounted Huge Pages File System.
 [[0;32m  OK  [0m] Mounted POSIX Message Queue File System.
+[[0;32m  OK  [0m] Started Uncomplicated firewall.
 [[0;32m  OK  [0m] Started LVM2 metadata daemon.
 [[0;32m  OK  [0m] Started File System Check Daemon to report status.
+[[0;32m  OK  [0m] Started Create list of required sta…vice nodes for the current kernel.
          Starting Create Static Device Nodes in /dev...
-[[0;32m  OK  [0m] Started Set the console keyboard layout.
-[[0;32m  OK  [0m] Started File System Check on Root Device.
-         Starting Remount Root and Kernel File Systems...
 [[0;32m  OK  [0m] Started Journal Service.
 [[0;32m  OK  [0m] Started udev Coldplug all Devices.
-[[0;32m  OK  [0m[   12.377557] EXT4-fs (sda1): re-mounted. Opts: (null)
-] Started Create Static Device Nodes in /dev.
-[[0;32m  OK  [0m] [   12.397531] iscsi: registered transport (iser)
-Started Remount Root and Kernel File Systems.
-         Starting Flush Journal to Persistent Storage...
-         Starting udev Kernel Device Manager...
-         Starting Load/Save Random Seed...
+[   19.220231] iscsi: registered transport (iser)
 [[0;32m  OK  [0m] Started Load Kernel Modules.
-[[0;32m  OK  [0m] Started Monitoring of LVM2 mirrors,…sing dmeventd or progress polling.
-[[0;32m  OK  [0m] Reached target Local File Systems (Pre).
-[[0;32m  OK  [0m] Reached target Local File Systems.
-         Starting Commit a transient machine-id on disk...
-         Starting Tell Plymouth To Write Out Runtime Data...
-         Starting ebtables ruleset management...
-         Starting Set console font and keymap...
-         Starting AppArmor initialization...
          Mounting Kernel Configuration File System...
          Mounting FUSE Control File System...
          Starting Apply Kernel Variables...
 [[0;32m  OK  [0m] Mounted Kernel Configuration File System.
 [[0;32m  OK  [0m] Mounted FUSE Control File System.
-[[0;32m  OK  [0m] Started udev Kernel Device Manager.
-[[0;32m  OK  [0m] Started Dispatch Password Requests to Console Directory Watch.[   12.559604] systemd-journald[410]: Received request to flush runtime journal from PID 1
-
-[[0;32m  OK  [0m] Reached target Local Encrypted Volumes.
-[[0;32m  OK  [0m] Started Load/Save Random Seed.
-[[0;32m  OK  [0m] Started Tell Plymouth To Write Out Runtime Data.
-[[0;32m  OK  [0m] Started Set console font and keymap.
+[[0;32m  OK  [0m] Started Monitoring of LVM2 mirrors,…sing dmeventd or progress polling.
+[[0;32m  OK  [0m] Started File System Check on Root Device.
+         Starting Remount Root and Kernel File Systems...
+[[0;32m  OK  [0m] Started Create Static Device Nodes in /dev.
+[[0;32m  OK  [0m] Started Remount Root and Kernel File Systems.
 [[0;32m  OK  [0m] Started Apply Kernel Variables.
+         Starting Load/Save Random Seed...
+         Starting Flush Journal to Persistent Storage...
+         Starting udev Kernel Device Manager...
+[[0;32m  OK  [0m] Started Load/Save Random Seed.
+[[0;32m  OK  [0m] Started Set the console keyboard layout.
+[[0;32m  OK  [0m] Reached target Local File Systems (Pre).
+[[0;32m  OK  [0m] Reached target Local File Systems.
+         Starting Set console font and keymap...
+         Starting AppArmor initialization...
+         Starting ebtables ruleset management...
+         Starting Commit a transient machine-id on disk...
+         Starting Tell Plymouth To Write Out Runtime Data...
+[[0;32m  OK  [0m] Started udev Kernel Device Manager.
+[[0;32m  OK  [0m] Started Dispatch Password Requests to Console Directory Watch.
+[[0;32m  OK  [0m] Reached target Local Encrypted Volumes.
+[[0;32m  OK  [0m] Started Set console font and keymap.
 [[0;32m  OK  [0m] Started Flush Journal to Persistent Storage.
-[[0;32m  OK  [0m] Started Commit a transient machine-id on disk.
+[[0;32m  OK  [0m] Started Tell Plymouth To Write Out Runtime Data.
          Starting Create Volatile Files and Directories...
 [[0;32m  OK  [0m] Started Create Volatile Files and Directories.
+[[0;32m  OK  [0m] Started Commit a transient machine-id on disk.
          Starting Update UTMP about System Boot/Shutdown...
-[[0;32m  OK  [0m] Started ebtables ruleset management.
 [[0;32m  OK  [0m] Started Update UTMP about System Boot/Shutdown.
+[[0;32m  OK  [0m] Started ebtables ruleset management.
 [[0;32m  OK  [0m] Found device /dev/ttyS0.
 [[0;32m  OK  [0m] Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
          Mounting Arbitrary Executable File Formats File System...
@@ -482,7 +480,7 @@ Started Remount Root and Kernel File Systems.
          Starting Load AppArmor profiles managed internally by snapd...
          Starting Initial cloud-init job (pre-networking)...
 [[0;32m  OK  [0m] Started Load AppArmor profiles managed internally by snapd.
-[   17.548039] cloud-init[547]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 running 'init-local' at Mon, 15 May 2023 12:58:46 +0000. Up 16.84 seconds.
+[   25.024915] cloud-init[541]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 running 'init-local' at Wed, 17 May 2023 10:45:59 +0000. Up 24.34 seconds.
 [[0;32m  OK  [0m] Started Initial cloud-init job (pre-networking).
 [[0;32m  OK  [0m] Reached target Network (Pre).
          Starting Network Service...
@@ -494,199 +492,314 @@ Started Remount Root and Kernel File Systems.
 [[0;32m  OK  [0m] Reached target Host and Network Name Lookups.
 [[0;32m  OK  [0m] Started Wait for Network to be Configured.
          Starting Initial cloud-init job (metadata service crawler)...
-[   20.431664] cloud-init[660]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 running 'init' at Mon, 15 May 2023 12:58:49 +0000. Up 20.19 seconds.
-[   20.436792] cloud-init[660]: ci-info: ++++++++++++++++++++++++++++++++++++++Net device info+++++++++++++++++++++++++++++++++++++++
-[   20.443213] cloud-init[660]: ci-info: +--------+-------+----------------------------+---------------+--------+-------------------+
-[   20.448448] cloud-init[660]: ci-info: | Device |   Up  |          Address           |      Mask     | Scope  |     Hw-Address    |
-[   20.453123] cloud-init[660]: ci-info: +--------+-------+----------------------------+---------------+--------+-------------------+
-[   20.458253] cloud-init[660]: ci-info: | enp0s3 |  True |         10.0.2.15          | 255.255.255.0 | global | 02:3e:6f:b6:28:d7 |
-[   20.463101] cloud-init[660]: ci-info: | enp0s3 |  True | fe80::3e:6fff:feb6:28d7/64 |       .       |  link  | 02:3e:6f:b6:28:d7 |
-[   20.469809] cloud-init[660]: ci-info: | enp0s8 | False |             .              |       .       |   .    | 08:00:27:31:b9:b6 |
-[   20.476821] cloud-init[660]: ci-info: |   lo   |  True |         127.0.0.1          |   255.0.0.0   |  host  |         .         |
-[   20.484216] cloud-init[660]: ci-info: |   lo   |  True |          ::1/128           |       .       |  host  |         .         |
-[   20.490972] cloud-init[660]: ci-info: +--------+-------+----------------------------+---------------+--------+-------------------+
-[   20.497505] cloud-init[660]: ci-info: ++++++++++++++++++++++++++++Route IPv4 info+++++++++++++++++++++++++++++
-[   20.503641] cloud-init[660]: ci-info: +-------+-------------+----------+-----------------+-----------+-------+
-[   20.511347] cloud-init[660]: ci-info: | Route | Destination | Gateway  |     Genmask     | Interface | Flags |
-[   20.517446] cloud-init[660]: ci-info: +-------+-------------+----------+-----------------+-----------+-------+
-[   20.523694] cloud-init[660]: ci-info: |   0   |   0.0.0.0   | 10.0.2.2 |     0.0.0.0     |   enp0s3  |   UG  |
-[   20.529303] cloud-init[660]: ci-info: |   1   |   10.0.2.0  | 0.0.0.0  |  255.255.255.0  |   enp0s3  |   U   |
-[   20.534737] cloud-init[660]: ci-info: |   2   |   10.0.2.2  | 0.0.0.0  | 255.255.255.255 |   enp0s3  |   UH  |
-[   20.541486] cloud-init[660]: ci-info: +-------+-------------+----------+-----------------+-----------+-------+
-[   20.547905] cloud-init[660]: ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
-[   20.553697] cloud-init[660]: ci-info: +-------+-------------+---------+-----------+-------+
-[   20.559256] cloud-init[660]: ci-info: | Route | Destination | Gateway | Interface | Flags |
-[   20.565410] cloud-init[660]: ci-info: +-------+-------------+---------+-----------+-------+
-[   20.570952] cloud-init[660]: ci-info: |   1   |  fe80::/64  |    ::   |   enp0s3  |   U   |
-[   20.576522] cloud-init[660]: ci-info: |   3   |    local    |    ::   |   enp0s3  |   U   |
-[   20.582601] cloud-init[660]: ci-info: |   4   |   ff00::/8  |    ::   |   enp0s3  |   U   |
-[   20.589448] cloud-init[660]: ci-info: +-------+-------------+---------+-----------+-------+
-[   22.807178] cloud-init[660]: Generating public/private rsa key pair.
-[   22.813919] cloud-init[660]: Your identification has been saved in /etc/ssh/ssh_host_rsa_key.
-[   22.820550] cloud-init[660]: Your public key has been saved in /etc/ssh/ssh_host_rsa_key.pub.
-[   22.827120] cloud-init[660]: The key fingerprint is:
-[   22.832835] cloud-init[660]: SHA256:th9YC561K2Uz09tdAVO0yE2Vmm3QPBBXCQnAFGC1K4w root@ubuntu-bionic
-[   22.843813] cloud-init[660]: The key's randomart image is:
-[   22.851027] cloud-init[660]: +---[RSA 2048]----+
-[   22.857546] cloud-init[660]: |       o==o..+X=B|
-[   22.862680] cloud-init[660]: |      .  .. .==*.|
-[   22.867453] cloud-init[660]: |         .   oBo.|
-[   22.872171] cloud-init[660]: |      o   .  o + |
-[   22.878393] cloud-init[660]: |     E oS.o.  . .|
-[   22.884553] cloud-init[660]: |       o.B*o.   .|
-[[0;32m  OK  [0m] [   22.912790] cloud-init[660]: |        =o++ o ..|
-[   22.913909] cloud-init[660]: |        .. o. . .|
-[   22.914682] cloud-init[660]: |         .o      |
-[   22.915208] cloud-init[660]: +----[SHA256]-----+
-[   22.915715] cloud-init[660]: Generating public/private dsa key pair.
-[   22.916870] cloud-init[660]: Your identification has been saved in /etc/ssh/ssh_host_dsa_key.
-[   22.917395] cloud-init[660]: Your public key has been saved in /etc/ssh/ssh_host_dsa_key.pub.
-[   22.917945] cloud-init[660]: The key fingerprint is:
-[   22.918901] cloud-init[660]: SHA256:GmXN8rJvdmSLNjSCBmmpx0uACd3Nz6RmBTwElD0CtOg root@ubuntu-bionic
-[   22.919373] cloud-init[660]: The key's randomart image is:
-[   22.919601] cloud-init[660]: +---[DSA 1024]----+
-[   22.920055] cloud-init[660]: | oo+oOo.         |
-[   22.921199] cloud-init[660]: |....+ B oo       |
-[   22.921504] cloud-init[660]: |oo.  + O+ o      |
-[   22.922008] cloud-init[660]: |+ . = +ooo       |
-[   22.922248] cloud-init[660]: | E = +..S .      |
-[   22.922674] cloud-init[660]: |  . + oo.oo o    |
-[   22.922997] cloud-init[660]: |   o o. .o = .   |
-[   22.923431] cloud-init[660]: |    .    .* o    |
-[   22.923836] cloud-init[660]: |         +.o     |
-[   22.924099] cloud-init[660]: +----[SHA256]-----+
-[   22.925438] cloud-init[660]: Generating public/private ecdsa key pair.
-[   22.925706] cloud-init[660]: Your identification has been saved in /etc/ssh/ssh_host_ecdsa_key.
-[   22.926111] cloud-init[660]: Your public key has been saved in /etc/ssh/ssh_host_ecdsa_key.pub.
-[   22.926376] cloud-init[660]: The key fingerprint is:
-[   22.926781] cloud-init[660]: SHA256:V8+xacATETe+lMoKJjnZbNy2i8rupO/XlIGAkSTH7Zk root@ubuntu-bionic
-[   22.927388] cloud-init[660]: The key's randomart image is:
-[   22.927814] cloud-init[660]: +---[ECDSA 256]---+
-[   22.929160] cloud-init[660]: |  .o+=      +oo  |
-[   22.929345] cloud-init[660]: |   o+ o    . + o |
-[   22.929722] cloud-init[660]: |     . + .  = =  |
-[   22.930130] cloud-init[660]: |      E*...o B = |
-[   22.930636] cloud-init[660]: |      = S +oo B  |
-[   22.930878] cloud-init[660]: |       = +oo .   |
-[   22.935804] cloud-init[660]: |      .  oo      |
-[   22.936907] cloud-init[660]: |     +  ....     |
-[   22.937395] cloud-init[660]: |    .=Bo. .      |
-[   22.937963] cloud-init[660]: +----[SHA256]-----+
-[   22.939339] cloud-init[660]: Generating public/private ed25519 key pair.
-[   22.939874] cloud-init[660]: Your identification has been saved in /etc/ssh/ssh_host_ed25519_key.
-[   22.940883] cloud-init[660]: Your public key has been saved in /etc/ssh/ssh_host_ed25519_key.pub.
-[   22.941402] cloud-init[660]: The key fingerprint is:
-[   22.941641] cloud-init[660]: SHA256:topYyXHV0kkJdpCRH9n/yv/Xk7n1fNNGWPfyjhyL7SI root@ubuntu-bionic
-[   22.942846] cloud-init[660]: The key's randomart image is:
-[   22.943814] cloud-init[660]: +--[ED25519 256]--+
-[   22.944706] cloud-init[660]: |        =*o+     |
-[   22.945272] cloud-init[660]: |       .o=+..    |
-[   22.945771] cloud-init[660]: |        o.+. .   |
-[   22.947140] cloud-init[660]: |       . ..   . o|
-[   22.947627] cloud-init[660]: |    . . S      +o|
-[   22.948940] cloud-init[660]: |   . + . .    o +|
-[   22.949517] cloud-init[660]: |    +   .    ..=*|
-[   22.950011] cloud-init[660]: |   o . .  E .+oXX|
-[   22.951608] cloud-init[660]: |  . . .    ..o*=&|
-[   22.951753] cloud-init[660]: +----[SHA256]-----+
-Started Initial cloud-init job (metadata service crawler).
+[   27.438165] cloud-init[643]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 running 'init' at Wed, 17 May 2023 10:46:02 +0000. Up 27.18 seconds.
+[   27.446328] cloud-init[643]: ci-info: ++++++++++++++++++++++++++++++++++++++Net device info+++++++++++++++++++++++++++++++++++++++
+[   27.450858] cloud-init[643]: ci-info: +--------+-------+----------------------------+---------------+--------+-------------------+
+[   27.456582] cloud-init[643]: ci-info: | Device |   Up  |          Address           |      Mask     | Scope  |     Hw-Address    |
+[   27.463880] cloud-init[643]: ci-info: +--------+-------+----------------------------+---------------+--------+-------------------+
+[   27.468942] cloud-init[643]: ci-info: | enp0s3 |  True |         10.0.2.15          | 255.255.255.0 | global | 02:3e:6f:b6:28:d7 |
+[   27.474845] cloud-init[643]: ci-info: | enp0s3 |  True | fe80::3e:6fff:feb6:28d7/64 |       .       |  link  | 02:3e:6f:b6:28:d7 |
+[   27.479991] cloud-init[643]: ci-info: | enp0s8 | False |             .              |       .       |   .    | 08:00:27:9d:e5:ae |
+[   27.486194] cloud-init[643]: ci-info: |   lo   |  True |         127.0.0.1          |   255.0.0.0   |  host  |         .         |
+[   27.492510] cloud-init[643]: ci-info: |   lo   |  True |          ::1/128           |       .       |  host  |         .         |
+[   27.499080] cloud-init[643]: ci-info: +--------+-------+----------------------------+---------------+--------+-------------------+
+[   27.504506] cloud-init[643]: ci-info: ++++++++++++++++++++++++++++Route IPv4 info+++++++++++++++++++++++++++++
+[   27.508717] cloud-init[643]: ci-info: +-------+-------------+----------+-----------------+-----------+-------+
+[   27.513588] cloud-init[643]: ci-info: | Route | Destination | Gateway  |     Genmask     | Interface | Flags |
+[   27.517742] cloud-init[643]: ci-info: +-------+-------------+----------+-----------------+-----------+-------+
+[   27.524027] cloud-init[643]: ci-info: |   0   |   0.0.0.0   | 10.0.2.2 |     0.0.0.0     |   enp0s3  |   UG  |
+[   27.529435] cloud-init[643]: ci-info: |   1   |   10.0.2.0  | 0.0.0.0  |  255.255.255.0  |   enp0s3  |   U   |
+[   27.533724] cloud-init[643]: ci-info: |   2   |   10.0.2.2  | 0.0.0.0  | 255.255.255.255 |   enp0s3  |   UH  |
+[   27.537752] cloud-init[643]: ci-info: +-------+-------------+----------+-----------------+-----------+-------+
+[   27.541486] cloud-init[643]: ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+[   27.545498] cloud-init[643]: ci-info: +-------+-------------+---------+-----------+-------+
+[   27.549291] cloud-init[643]: ci-info: | Route | Destination | Gateway | Interface | Flags |
+[   27.552659] cloud-init[643]: ci-info: +-------+-------------+---------+-----------+-------+
+[   27.555960] cloud-init[643]: ci-info: |   1   |  fe80::/64  |    ::   |   enp0s3  |   U   |
+[   27.559057] cloud-init[643]: ci-info: |   3   |    local    |    ::   |   enp0s3  |   U   |
+[   27.563228] cloud-init[643]: ci-info: |   4   |   ff00::/8  |    ::   |   enp0s3  |   U   |
+[   27.567649] cloud-init[643]: ci-info: +-------+-------------+---------+-----------+-------+
+[   29.087177] cloud-init[643]: Generating public/private rsa key pair.
+[   29.090901] cloud-init[643]: Your identification has been saved in /etc/ssh/ssh_host_rsa_key.
+[   29.094965] cloud-init[643]: Your public key has been saved in /etc/ssh/ssh_host_rsa_key.pub.
+[   29.098057] cloud-init[643]: The key fingerprint is:
+[   29.100520] cloud-init[643]: SHA256:u7YA3Xa9t18P2VKgY1cKsZ2g01MZ8mhctV0md8rDZFg root@ubuntu-bionic
+[   29.104668] cloud-init[643]: The key's randomart image is:
+[   29.106765] cloud-init[643]: +---[RSA 2048]----+
+[   29.111402] cloud-init[643]: |            +oE+*|
+[   29.114730] cloud-init[643]: |           +./.*=|
+[   29.117347] cloud-init[643]: |          o O X.o|
+[   29.121298] cloud-init[643]: |     . .   + + = |
+[   29.123173] cloud-init[643]: |    . . S . = o .|
+[   29.126224] cloud-init[643]: |     . . o . + + |
+[   29.128412] cloud-init[643]: |      . .   . = o|
+[   29.130613] cloud-init[643]: |       ...   . +o|
+[   29.132929] cloud-init[643]: |       .o.    ..o|
+[   29.135453] cloud-init[643]: +----[SHA256]-----+
+[   29.137518] cloud-init[643]: Generating public/private dsa key pair.
+[   29.140584] cloud-init[643]: Your identification has been saved in /etc/ssh/ssh_host_dsa_key.
+[   29.145667] cloud-init[643]: Your public key has been saved in /etc/ssh/ssh_host_dsa_key.pub.
+[   29.153526] cloud-init[643]: The key fingerprint is:
+[   29.156235] cloud-init[643]: SHA256:M0etwDodyKIl7B/2AAYi+ypwFjoHk6n3qKY7Z3pNN1k root@ubuntu-bionic
+[   29.161904] cloud-init[643]: The key's randomart image is:
+[   29.165005] cloud-init[643]: +---[DSA 1024]----+
+[   29.167615] cloud-init[643]: |+                |
+[   29.170324] cloud-init[643]: |o*   . o   .     |
+[   29.172742] cloud-init[643]: |* * o o + . .    |
+[   29.176172] cloud-init[643]: |.B * . oE+ .     |
+[   29.179259] cloud-init[643]: |= O + ooS o      |
+[   29.182232] cloud-init[643]: |.B =.++. +       |
+[   29.185363] cloud-init[643]: |o .oo...         |
+[   29.187432] cloud-init[643]: |oo+ .            |
+[   29.190117] cloud-init[643]: |BB               |
+[   29.193958] cloud-init[643]: +----[SHA256]-----+
+[   29.196823] cloud-init[643]: Generating public/private ecdsa key pair.
+[   29.199592] cloud-init[643]: Your identification has been saved in /etc/ssh/ssh_host_ecdsa_key.
+[   29.203617] cloud-init[643]: Your public key has been saved in /etc/ssh/ssh_host_ecdsa_key.pub.
+[   29.207691] cloud-init[643]: The key fingerprint is:
+[   29.210586] cloud-init[643]: SHA256:qS0TSB+96HWm9ApYU5JHIQMzTeCb0cU/pkSj/meyOUA root@ubuntu-bionic
+[   29.214401] cloud-init[643]: The key's randomart image is:
+[   29.217084] cloud-init[643]: +---[ECDSA 256]---+
+[   29.221065] cloud-init[643]: |    ==+.+.       |
+[   29.229635] cloud-init[643]: |   . +.B+        |
+[   29.231808] cloud-init[643]: |    + =o+o       |
+[   29.233915] cloud-init[643]: |   . *E*.o+      |
+[   29.237992] cloud-init[643]: |    +o*.Soo.     |
+[   29.240371] cloud-init[643]: |     +oB.=       |
+[   29.244354] cloud-init[643]: |    . *oo .      |
+[   29.246594] cloud-init[643]: |       ++oo      |
+[   29.248760] cloud-init[643]: |        +*       |
+[   29.250657] cloud-init[643]: +----[SHA256]-----+
+[   29.252702] cloud-init[643]: Generating public/private ed25519 key pair.
+[   29.255785] cloud-init[643]: Your identification has been saved in /etc/ssh/ssh_host_ed25519_key.
+[   29.260955] cloud-init[643]: Your public key has been saved in /etc/ssh/ssh_host_ed25519_key.pub.
+[   29.264962] cloud-init[643]: The key fingerprint is:
+[   29.267038] cloud-init[643]: SHA256:UyttoYY6A2EWXttmeHJ8sue+5TIW8jD9aG7BKMyJ840 root@ubuntu-bionic
+[   29.272042] cloud-init[643]: The key's randomart image is:
+[   29.275544] cloud-init[643]: +--[ED25519 256]--+
+[   29.277681] cloud-init[643]: |  . .            |
+[   29.279646] cloud-init[643]: | . o =           |
+[   29.282106] cloud-init[643]: |  = + O . o      |
+[   29.284361] cloud-init[643]: | o . * = + o     |
+[   29.286673] cloud-init[643]: |  .+ .o+S +      |
+[   29.288738] cloud-init[643]: |  o.=.=+=+       |
+[   29.290688] cloud-init[643]: |   o++ =.=.      |
+[   29.293871] cloud-init[643]: |    Eo..Oo.      |
+[   29.295950] cloud-init[643]: |       =++.      |
+[   29.298086] cloud-init[643]: +----[SHA256]-----+
+[[0;32m  OK  [0m] Started Initial cloud-init job (metadata service crawler).
 [[0;32m  OK  [0m] Reached target System Initialization.
-[[0;32m  OK  [0m] Started Daily Cleanup of Temporary Directories.
-[[0;32m  OK  [0m] Listening on UUID daemon activation socket.
-[[0;32m  OK  [0m] Listening on cloud-init hotplug hook socket.
-         Starting LXD - unix socket.
-[[0;32m  OK  [0m] Started ACPI Events Check.
 [[0;32m  OK  [0m] Listening on Open-iSCSI iscsid Socket.
-[[0;32m  OK  [0m] Reached target Paths.
-[[0;32m  OK  [0m] Listening on ACPID Listen Socket.
-[[0;32m  OK  [0m] Started Daily apt download activities.
 [[0;32m  OK  [0m] Started Discard unused blocks once a week.
-[[0;32m  OK  [0m] Started Daily apt upgrade and clean activities.
-         Starting Socket activation for snappy daemon.
-[[0;32m  OK  [0m] Listening on D-Bus System Message Bus Socket.
-[[0;32m  OK  [0m] Started Message of the Day.
 [[0;32m  OK  [0m] Started Ubuntu Advantage Timer for running repeated jobs.
+[[0;32m  OK  [0m] Started ACPI Events Check.
+[[0;32m  OK  [0m] Reached target Paths.
+[[0;32m  OK  [0m] Started Daily apt download activities.
+[[0;32m  OK  [0m] Started Daily apt upgrade and clean activities.
+[[0;32m  OK  [0m] Started Message of the Day.
+[[0;32m  OK  [0m] Listening on ACPID Listen Socket.
+[[0;32m  OK  [0m] Listening on UUID daemon activation socket.
+[[0;32m  OK  [0m] Started Daily Cleanup of Temporary Directories.
 [[0;32m  OK  [0m] Reached target Timers.
-[[0;32m  OK  [0m] Reached target Cloud-config availability.
+         Starting LXD - unix socket.
+         Starting Socket activation for snappy daemon.
+[[0;32m  OK  [0m] Listening on cloud-init hotplug hook socket.
+[[0;32m  OK  [0m] Listening on D-Bus System Message Bus Socket.
 [[0;32m  OK  [0m] Reached target Network is Online.
          Starting Availability of block devices...
 [[0;32m  OK  [0m] Reached target Remote File Systems (Pre).
 [[0;32m  OK  [0m] Reached target Remote File Systems.
+[[0;32m  OK  [0m] Reached target Cloud-config availability.
 [[0;32m  OK  [0m] Listening on LXD - unix socket.
 [[0;32m  OK  [0m] Listening on Socket activation for snappy daemon.
 [[0;32m  OK  [0m] Started Availability of block devices.
 [[0;32m  OK  [0m] Reached target Sockets.
 [[0;32m  OK  [0m] Reached target Basic System.
-[[0;32m  OK  [0m] Reached target Login Prompts (Pre).
-         Starting System Logging Service...
-         Starting Snap Daemon...
-         Starting Permit User Sessions...
-         Starting LXD - container startup/shutdown...
-[[0;32m  OK  [0m] Started Deferred execution scheduler.
-[[0;32m  OK  [0m] Started FUSE filesystem for LXC.
-[[0;32m  OK  [0m] Started Regular background program processing daemon.
-         Starting Dispatcher daemon for systemd-networkd...
-[[0;32m  OK  [0m] Started D-Bus System Message Bus.
          Starting Login Service...
-         Starting LSB: Record successful boot for GRUB...
+[[0;32m  OK  [0m] Started Regular background program processing daemon.
          Starting Pollinate to seed the pseudo random number generator...
-         Starting Virtualbox guest utils...
-         Starting LSB: automatic crash report generation...
-[[0;32m  OK  [0m] Started irqbalance daemon.
          Starting Accounts Service...
+         Starting Dispatcher daemon for systemd-networkd...
+         Starting Virtualbox guest utils...
+         Starting LSB: Record successful boot for GRUB...
+         Starting Permit User Sessions...
+[[0;32m  OK  [0m] Started FUSE filesystem for LXC.
+[[0;32m  OK  [0m] Started irqbalance daemon.
+[[0;32m  OK  [0m] Reached target Login Prompts (Pre).
+[[0;32m  OK  [0m] Started Deferred execution scheduler.
+         Starting System Logging Service...
+         Starting LSB: automatic crash report generation...
+[[0;32m  OK  [0m] Started D-Bus System Message Bus.
+         Starting Snap Daemon...
+         Starting LXD - container startup/shutdown...
 [[0;32m  OK  [0m] Started System Logging Service.
 [[0;32m  OK  [0m] Started Permit User Sessions.
 [[0;32m  OK  [0m] Started Login Service.
 [[0;32m  OK  [0m] Started Unattended Upgrades Shutdown.
-         Starting Hold until boot process finishes up...
          Starting Terminate Plymouth Boot Screen...
+         Starting Hold until boot process finishes up...
 [[0;32m  OK  [0m] Started Hold until boot process finishes up.
 [[0;32m  OK  [0m] Started Terminate Plymouth Boot Screen.
-         Starting Set console scheme...
 [[0;32m  OK  [0m] Started Serial Getty on ttyS0.
+         Starting Set console scheme...
+         Starting Authorization Manager...
 [[0;32m  OK  [0m] Started Set console scheme.
 [[0;32m  OK  [0m] Created slice system-getty.slice.
 [[0;32m  OK  [0m] Started Getty on tty1.
 [[0;32m  OK  [0m] Reached target Login Prompts.
-[[0;32m  OK  [0m] Started Dispatcher daemon for systemd-networkd.
-[[0;32m  OK  [0m] Started LSB: Record successful boot for GRUB.
 [[0;32m  OK  [0m] Started LSB: automatic crash report generation.
-         Starting Authorization Manager...
+[[0;32m  OK  [0m] Started LSB: Record successful boot for GRUB.
 [[0;32m  OK  [0m] Started Virtualbox guest utils.
-[[0;32m  OK  [0m] Started LXD - container startup/shutdown.
 [[0;32m  OK  [0m] Started Authorization Manager.
 [[0;32m  OK  [0m] Started Accounts Service.
+[[0;32m  OK  [0m] Started Dispatcher daemon for systemd-networkd.
+[[0;32m  OK  [0m] Started LXD - container startup/shutdown.
 [[0;32m  OK  [0m] Started Pollinate to seed the pseudo random number generator.
          Starting OpenBSD Secure Shell server...
+[[0;32m  OK  [0m] Started OpenBSD Secure Shell server.
 [[0;32m  OK  [0m] Started Snap Daemon.
          Starting Wait until snapd is fully seeded...
-[[0;32m  OK  [0m] Started OpenBSD Secure Shell server.
+         Starting Time & Date Service...
+[[0;32m  OK  [0m] Started Time & Date Service.
 [[0;32m  OK  [0m] Created slice User Slice of vagrant.
          Starting User Manager for UID 1000...
 [[0;32m  OK  [0m] Started Session 1 of user vagrant.
-         Starting Time & Date Service...
-[[0;32m  OK  [0m] Started Time & Date Service.
 [[0;32m  OK  [0m] Started User Manager for UID 1000.
 [[0;32m  OK  [0m] Started Wait until snapd is fully seeded.
          Starting Apply the settings specified in cloud-config...
 
 Ubuntu 18.04.6 LTS ubuntu-bionic ttyS0
 
-ubuntu-bionic login: [   32.548006] cloud-init[1191]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 running 'modules:config' at Mon, 15 May 2023 12:58:59 +0000. Up 29.99 seconds.
+ubuntu-bionic login: [   38.498658] cloud-init[1195]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 running 'modules:config' at Wed, 17 May 2023 10:46:11 +0000. Up 36.01 seconds.
 ci-info: no authorized SSH keys fingerprints found for user ubuntu.
-<14>May 15 12:59:03 cloud-init: #############################################################
-<14>May 15 12:59:03 cloud-init: -----BEGIN SSH HOST KEY FINGERPRINTS-----
-<14>May 15 12:59:03 cloud-init: 1024 SHA256:GmXN8rJvdmSLNjSCBmmpx0uACd3Nz6RmBTwElD0CtOg root@ubuntu-bionic (DSA)
-<14>May 15 12:59:03 cloud-init: 256 SHA256:V8+xacATETe+lMoKJjnZbNy2i8rupO/XlIGAkSTH7Zk root@ubuntu-bionic (ECDSA)
-<14>May 15 12:59:03 cloud-init: 256 SHA256:topYyXHV0kkJdpCRH9n/yv/Xk7n1fNNGWPfyjhyL7SI root@ubuntu-bionic (ED25519)
-<14>May 15 12:59:03 cloud-init: 2048 SHA256:th9YC561K2Uz09tdAVO0yE2Vmm3QPBBXCQnAFGC1K4w root@ubuntu-bionic (RSA)
-<14>May 15 12:59:03 cloud-init: -----END SSH HOST KEY FINGERPRINTS-----
-<14>May 15 12:59:03 cloud-init: #############################################################
+<14>May 17 10:46:15 cloud-init: #############################################################
+<14>May 17 10:46:15 cloud-init: -----BEGIN SSH HOST KEY FINGERPRINTS-----
+<14>May 17 10:46:15 cloud-init: 1024 SHA256:M0etwDodyKIl7B/2AAYi+ypwFjoHk6n3qKY7Z3pNN1k root@ubuntu-bionic (DSA)
+<14>May 17 10:46:15 cloud-init: 256 SHA256:qS0TSB+96HWm9ApYU5JHIQMzTeCb0cU/pkSj/meyOUA root@ubuntu-bionic (ECDSA)
+<14>May 17 10:46:15 cloud-init: 256 SHA256:UyttoYY6A2EWXttmeHJ8sue+5TIW8jD9aG7BKMyJ840 root@ubuntu-bionic (ED25519)
+<14>May 17 10:46:15 cloud-init: 2048 SHA256:u7YA3Xa9t18P2VKgY1cKsZ2g01MZ8mhctV0md8rDZFg root@ubuntu-bionic (RSA)
+<14>May 17 10:46:15 cloud-init: -----END SSH HOST KEY FINGERPRINTS-----
+<14>May 17 10:46:15 cloud-init: #############################################################
 -----BEGIN SSH HOST KEY KEYS-----
-ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIM/duSTlBMRqOtCnJ0QtyTUpNAjGOEPt3ZgYNAHGbOiTgpY3VsK7GcE5IRhi/TDklREirifoLSxWJFJsyfUMgc= root@ubuntu-bionic
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFRKsVqSSMjZBXyf+BZvF/yubOEYOvdx1HfBu5rSrD6X root@ubuntu-bionic
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCob7Ez27LinM+DG8usACK7HwyvpAA7JxVM9kxicI2giYiO9jW1hecOkEG7jxdI9wz4cTL6thgNSJhTH6umllTo7waNP+KPAZ8Kf76jFCF1ijqBvLC1H51jHTrYD0ch01g2y0UNvyQek05uEHzEheVMD/lFeU1B646EBc1mImzLKsRd9drIDTPSEgkdvZcoEnQgMNPnCXxm0tnOOUOyfSu99MV6P4HbV1cRM8s13nHhMO9/kRTHgbQ0aSHI+bZF72p4CK+2uRocNSo5/VTF9HYXVOoGPHRPcIMoWHb/gWV9oJRHnxDBfBDbWXR1D88Fwp58gCDzC+uTgl1HCmarOfg1 root@ubuntu-bionic
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAKxioDCt7tP/NXcD9zsy2XwcoiSgouJNvfI/Kgb9VxE3GVMr9u1SHlwlIz+rr+cDWJIAKBCQreffs+S2zQjCKk= root@ubuntu-bionic
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICdKZwlMx1eG0RZpFOgRYlDEBjU+iBI5EjsATq4zpSez root@ubuntu-bionic
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMQgn8CpME/Q2HSjd/Lf1KxgRJBG8aJ+ud1PZA0001ju7QQu0tWNbNPy+eqinlhgCYoLSc3C9MPqtAXzEBHiikT9j+gMDGdPTPzpDsBohMDKc0jk760zOJMs1Ps0cb0PeqarKRxTOx7sMOVRMRM201AtK1gURObdnQ8Z+qkY5wawT2dfYKZ6ZEwJC1h85NhwbDJXx2pCvAaIQ97StOFTRxISOo2+xZy8FECa2VVSp9KXquIn7aA3++lsALgdI3FOWyOkZELzgMloQr6ua1d1QSXIByJszSPcyV73SSdHiYJdJ9HWexpa46OzzWSgPryXyRd7TKHNBNPwVUi17q22NN root@ubuntu-bionic
 -----END SSH HOST KEY KEYS-----
-[   34.231346] cloud-init[1334]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 running 'modules:final' at Mon, 15 May 2023 12:59:03 +0000. Up 33.59 seconds.
-[   34.255407] cloud-init[1334]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 finished at Mon, 15 May 2023 12:59:03 +0000. Datasource DataSourceNoCloud [seed=/dev/sdb][dsmode=net].  Up 34.21 seconds
+[   40.495660] cloud-init[1327]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 running 'modules:final' at Wed, 17 May 2023 10:46:15 +0000. Up 40.08 seconds.
+[   40.508483] cloud-init[1327]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 finished at Wed, 17 May 2023 10:46:16 +0000. Datasource DataSourceNoCloud [seed=/dev/sdb][dsmode=net].  Up 40.45 seconds
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      [   21.091934] cloud-init[689]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 running 'init' at Wed, 17 May 2023 10:44:54 +0000. Up 20.78 seconds.
+[   21.098826] cloud-init[689]: ci-info: ++++++++++++++++++++++++++++++++++++++Net device info++++++++++++++++++++++++++++++++++++++
+[   21.104905] cloud-init[689]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+[   21.110615] cloud-init[689]: ci-info: | Device |  Up  |          Address           |      Mask     | Scope  |     Hw-Address    |
+[   21.116637] cloud-init[689]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+[   21.121779] cloud-init[689]: ci-info: | enp0s3 | True |         10.0.2.15          | 255.255.255.0 | global | 02:3e:6f:b6:28:d7 |
+[   21.127559] cloud-init[689]: ci-info: | enp0s3 | True | fe80::3e:6fff:feb6:28d7/64 |       .       |  link  | 02:3e:6f:b6:28:d7 |
+[   21.133260] cloud-init[689]: ci-info: | enp0s8 | True |       192.168.10.100       | 255.255.255.0 | global | 08:00:27:10:0d:9e |
+[   21.140211] cloud-init[689]: ci-info: | enp0s8 | True | fe80::a00:27ff:fe10:d9e/64 |       .       |  link  | 08:00:27:10:0d:9e |
+[   21.145799] cloud-init[689]: ci-info: |   lo   | True |         127.0.0.1          |   255.0.0.0   |  host  |         .         |
+[   21.153567] cloud-init[689]: ci-info: |   lo   | True |          ::1/128           |       .       |  host  |         .         |
+[   21.159820] cloud-init[689]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+[   21.166687] cloud-init[689]: ci-info: +++++++++++++++++++++++++++++Route IPv4 info+++++++++++++++++++++++++++++
+[   21.174784] cloud-init[689]: ci-info: +-------+--------------+----------+-----------------+-----------+-------+
+[   21.180140] cloud-init[689]: ci-info: | Route | Destination  | Gateway  |     Genmask     | Interface | Flags |
+[   21.187489] cloud-init[689]: ci-info: +-------+--------------+----------+-----------------+-----------+-------+
+[   21.201105] cloud-init[689]: ci-info: |   0   |   0.0.0.0    | 10.0.2.2 |     0.0.0.0     |   enp0s3  |   UG  |
+[   21.206448] cloud-init[689]: ci-info: |   1   |   10.0.2.0   | 0.0.0.0  |  255.255.255.0  |   enp0s3  |   U   |
+[   21.221227] cloud-init[689]: ci-info: |   2   |   10.0.2.2   | 0.0.0.0  | 255.255.255.255 |   enp0s3  |   UH  |
+[   21.226379] cloud-init[689]: ci-info: |   3   | 192.168.10.0 | 0.0.0.0  |  255.255.255.0  |   enp0s8  |   U   |
+[   21.239247] cloud-init[689]: ci-info: +-------+--------------+----------+-----------------+-----------+-------+
+[   21.249619] cloud-init[689]: ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+[   21.267946] cloud-init[689]: ci-info: +-------+-------------+---------+-----------+-------+
+[   21.276231] cloud-init[689]: ci-info: | Route | Destination | Gateway | Interface | Flags |
+[   21.286537] cloud-init[689]: ci-info: +-------+-------------+---------+-----------+-------+
+[   21.293367] cloud-init[689]: ci-info: |   1   |  fe80::/64  |    ::   |   enp0s8  |   U   |
+[   21.325107] cloud-init[689]: ci-info: |   2   |  fe80::/64  |    ::   |   enp0s3  |   U   |
+[   21.335566] cloud-init[689]: ci-info: |   4   |    local    |    ::   |   enp0s3  |   U   |
+[   21.354371] cloud-init[689]: ci-info: |   5   |    local    |    ::   |   enp0s8  |   U   |
+[   21.360964] cloud-init[689]: ci-info: |   6   |   ff00::/8  |    ::   |   enp0s8  |   U   |
+[   21.370716] cloud-init[689]: ci-info: |   7   |   ff00::/8  |    ::   |   enp0s3  |   U   |
+[   21.390960] cloud-init[689]: ci-info: +-------+-------------+---------+-----------+-------+
+[[0;32m  OK  [0m] Started Initial cloud-init job (metadata service crawler).
+[[0;32m  OK  [0m] Reached target Network is Online.
+         Starting Availability of block devices...
+[[0;32m  OK  [0m] Reached target Remote File Systems (Pre).
+         Mounting /vagrant...
+         Mounting /home/vagrant/app...
+[[0;32m  OK  [0m] Reached target System Initialization.
+[[0;32m  OK  [0m] Listening on D-Bus System Message Bus Socket.
+         Starting Socket activation for snappy daemon.
+[[0;32m  OK  [0m] Listening on cloud-init hotplug hook socket.
+         Starting LXD - unix socket.
+[[0;32m  OK  [0m] Started Daily Cleanup of Temporary Directories.
+[[0;32m  OK  [0m] Listening on UUID daemon activation socket.
+[[0;32m  OK  [0m] Started Ubuntu Advantage Timer for running repeated jobs.
+[[0;32m  OK  [0m] Listening on Open-iSCSI iscsid Socket.
+[[0;32m  OK  [0m] Started ACPI Events Check.
+[[0;32m  OK  [0m] Reached target Paths.
+[[0;32m  OK  [0m] Started Message of the Day.
+[[0;32m  OK  [0m] Started Daily apt download activities.
+[[0;32m  OK  [0m] Started Daily apt upgrade and clean activities.
+[[0;32m  OK  [0m] Started Discard unused blocks once a week.
+[[0;32m  OK  [0m] Reached target Timers.
+[[0;32m  OK  [0m] Listening on ACPID Listen Socket.
+[[0;32m  OK  [0m] Reached target Cloud-config availability.
+[[0;32m  OK  [0m] Started Availability of block devices.
+[[0;32m  OK  [0m] Mounted /vagrant.
+[[0;32m  OK  [0m] Mounted /home/vagrant/app.
+[[0;32m  OK  [0m] Listening on Socket activation for snappy daemon.
+[[0;32m  OK  [0m] Listening on LXD - unix socket.
+[[0;32m  OK  [0m] Reached target Sockets.
+[[0;32m  OK  [0m] Reached target Basic System.
+         Starting Virtualbox guest utils...
+         Starting PM2 process manager...
+[[0;32m  OK  [0m] Reached target Login Prompts (Pre).
+         Starting Accounts Service...
+[[0;32m  OK  [0m] Started D-Bus System Message Bus.
+         Starting System Logging Service...
+         Starting LSB: Record successful boot for GRUB...
+[[0;32m  OK  [0m] Started Deferred execution scheduler.
+[[0;32m  OK  [0m] Started Regular background program processing daemon.
+         Starting Login Service...
+         Starting OpenBSD Secure Shell server...
+         Starting Dispatcher daemon for systemd-networkd...
+         Starting LXD - container startup/shutdown...
+[[0;32m  OK  [0m] Started FUSE filesystem for LXC.
+         Starting Snap Daemon...
+[[0;32m  OK  [0m] Started irqbalance daemon.
+         Starting A high performance web server and a reverse proxy server...
+[[0;32m  OK  [0m] Reached target Remote File Systems.
+         Starting Permit User Sessions...
+         Starting LSB: automatic crash report generation...
+[[0;32m  OK  [0m] Started System Logging Service.
+[[0;32m  OK  [0m] Started Permit User Sessions.
+[[0;32m  OK  [0m] Started Login Service.
+[[0;32m  OK  [0m] Started Unattended Upgrades Shutdown.
+         Starting Hold until boot process finishes up...
+         Starting Terminate Plymouth Boot Screen...
+         Starting Authorization Manager...
+[[0;32m  OK  [0m] Started Hold until boot process finishes up.
+[[0;32m  OK  [0m] Started Terminate Plymouth Boot Screen.
+[[0;32m  OK  [0m] Started Serial Getty on ttyS0.
+         Starting Set console scheme...
+[[0;32m  OK  [0m] Started Set console scheme.
+[[0;32m  OK  [0m] Created slice system-getty.slice.
+[[0;32m  OK  [0m] Started Getty on tty1.
+[[0;32m  OK  [0m] Reached target Login Prompts.
+[[0;32m  OK  [0m] Started Authorization Manager.
+[[0;32m  OK  [0m] Started Accounts Service.
+[[0;32m  OK  [0m] Started LSB: automatic crash report generation.
+[[0;32m  OK  [0m] Started OpenBSD Secure Shell server.
+[[0;32m  OK  [0m] Started LSB: Record successful boot for GRUB.
+[[0;32m  OK  [0m] Started Virtualbox guest utils.
+[[0;32m  OK  [0m] Started Dispatcher daemon for systemd-networkd.
+[[0;32m  OK  [0m] Started A high performance web server and a reverse proxy server.
+[[0;32m  OK  [0m] Started LXD - container startup/shutdown.
+[[0;32m  OK  [0m] Started Snap Daemon.
+         Starting Wait until snapd is fully seeded...
+
+Ubuntu 18.04.6 LTS ubuntu-bionic ttyS0
+
+ubuntu-bionic login: [   31.493831] cloud-init[1209]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 running 'modules:config' at Wed, 17 May 2023 10:45:05 +0000. Up 31.18 seconds.
+[   33.029778] cloud-init[1242]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 running 'modules:final' at Wed, 17 May 2023 10:45:06 +0000. Up 32.66 seconds.
+[   33.064039] cloud-init[1242]: Cloud-init v. 23.1.2-0ubuntu0~18.04.1 finished at Wed, 17 May 2023 10:45:07 +0000. Datasource DataSourceNoCloud [seed=/dev/sdb][dsmode=net].  Up 33.01 seconds
 
