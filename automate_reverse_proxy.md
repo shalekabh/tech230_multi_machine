@@ -54,14 +54,26 @@ sudo nginx -t - this checks all syntax is correct
 sudo systemctl reload nginx
 
 sudo systemctl enable ngix
+
 # install app dependencies
+
 sudo apt-get install python-software-properties
+
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
 sudo apt-get install nodejs -y
+
 cd app
+
 sudo apt-get install npm
+
 npm install
+
 sudo npm install pm2 -g
+
+node seeds/seed.js
+
+pm2 start app.js --update-env
 
 
 

@@ -49,6 +49,8 @@ EOF'
 sudo nginx -t
 
 sudo systemctl reload nginx
+
+pm2 start app.js --update-env
 #npm start
 
 # install npm in app directory and run the app
