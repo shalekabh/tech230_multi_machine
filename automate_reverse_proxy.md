@@ -90,7 +90,7 @@ If there are no errors then the script runs correctly (you may have to run it wi
 
 The script below is the reverse proxy
 
-sudo bash -c 'cat <<EOF > /etc/nginx/sites-available/default
+```sudo bash -c 'cat <<EOF > /etc/nginx/sites-available/default
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -114,31 +114,31 @@ server {
         proxy_cache_bypass \$http_upgrade;
     }
 }
-EOF'
+EOF'```
 
-sudo bash -c 'cat <<EOF > /etc/nginx/sites-available/default
+```sudo bash -c 'cat <<EOF > /etc/nginx/sites-available/default```
 
 sudo: Executes the subsequent command with superuser (root) privileges.
 
-bash -c '...': Starts a new Bash shell and executes the given command(s) within it.
+```bash -c '...'```: Starts a new Bash shell and executes the given command(s) within it.
 
-cat <<EOF > /etc/nginx/sites-available/default command is using a "Here Document" syntax in Bash. It allows you to input multiple lines of text into a command and redirect it to a file. In this case, the content between <<EOF and EOF is the input, and it will be written to the /etc/nginx/sites-available/default file. EOF = "End OF File"
+```cat <<EOF > /etc/nginx/sites-available/default``` command is using a "Here Document" syntax in Bash. It allows you to input multiple lines of text into a command and redirect it to a file. In this case, the content between <<EOF and EOF is the input, and it will be written to the ```/etc/nginx/sites-available/default file. EOF = "End OF File"```
 
 
 Now we do the same for the database without the revesrse proxy.
 
 The code is as follows :
 
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt install -y mongodb
-sudo apt-get install -y mongodb-org=3.6.8 mongodb-org-server=3.6.8 mongodb-org->
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5>
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongo>
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo systemctl start mongodb
-sudo systemctl enable mongodb
-sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf - this overwrites the bind ip to what we need
-sudo systemctl restart mongod
-sudo systemctl enable mongod
+```sudo apt-get update -y```
+```sudo apt-get upgrade -y```
+```sudo apt install -y mongodb```
+```sudo apt-get install -y mongodb-org=3.6.8 mongodb-org-server=3.6.8 mongodb-org->```
+```sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5>```
+```echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongo>```
+```sudo apt-get update -y```
+```sudo apt-get upgrade -y```
+```sudo systemctl start mongodb```
+```sudo systemctl enable mongodb```
+```sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf``` - this overwrites the bind ip to what we need
+```sudo systemctl restart mongod```
+```sudo systemctl enable mongod```
