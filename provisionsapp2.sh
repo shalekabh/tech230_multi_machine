@@ -6,6 +6,12 @@ sudo apt-get upgrade -y
 # Install nginx web server
 sudo apt-get install nginx -y
 
+# install sed
+sudo apt install sed -y
+
+#install git
+sudo apt install git
+
 # Start nginx web server
 sudo systemctl start nginx
 
@@ -21,43 +27,53 @@ sudo apt-get install -y npm
 sudo npm install
 sudo npm install -g pm2
 
-# Define the line to add to .bashrc
-line="export DB_HOST=mongodb://192.168.10.150:27017/posts"
+# Copy files using using git
+git clone https://github.com/shalekabh/app.git
 
-# Append the line to .bashrc if it doesn't already exist
-grep -qxF "$line" ~/.bashrc || echo "$line" >> ~/.bashrc
+# Set the environment variable
+echo 'export DB_HOST=mongodb://192.168.10.150:27017/posts' >> ~/.bashrc
 
-source .bashrc
+# Refresh the current shell session to apply the changes
+source ~/.bashrc
+
+
 # Configure nginx
-sudo bash -c 'cat <<EOF > /etc/nginx/sites-available/default
-server {
-    listen 80 default_server;
-    listen [::]:80 default_server;
-    root /var/www/html;
-    server_name 192.168.10.100;
 
-    location / {
-        proxy_pass http://localhost:3000;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade \$http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host \$host;
-        proxy_cache_bypass \$http_upgrade;
-    }
-    location /posts {
-        proxy_pass http://localhost:3000;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade \$http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host \$host;
-        proxy_cache_bypass \$http_upgrade;
-    }
-}
-EOF'
+#sudo sed -i 's@try_files $uri $uri/=404;@proxy_pass http://localhost:3000;@g' /etc/nginx/sites-available/default
+sudo sed -i 's@try_files $uri $uri/=404;@location /posts {\n    proxy_pass http://localhost:3000/posts;\n}\n\n    location / {\n        proxy_pass http://localhost:3000;\n    }@g' /etc/nginx/sites-available/default
+
+# sudo bash -c 'cat <<EOF > /etc/nginx/sites-available/default
+# server {
+#     listen 80 default_server;
+#     listen [::]:80 default_server;
+#     root /var/www/html;
+#     server_name 192.168.10.100;
+
+#     location / {
+#         proxy_pass http://localhost:3000;
+#         proxy_http_version 1.1;
+#         proxy_set_header Upgrade \$http_upgrade;
+#         proxy_set_header Connection 'upgrade';
+#         proxy_set_header Host \$host;
+#         proxy_cache_bypass \$http_upgrade;
+#     }
+#     location /posts {
+#         proxy_pass http://localhost:3000;
+#         proxy_http_version 1.1;
+#         proxy_set_header Upgrade \$http_upgrade;
+#         proxy_set_header Connection 'upgrade';
+#         proxy_set_header Host \$host;
+#         proxy_cache_bypass \$http_upgrade;
+#     }
+# }
+# EOF'
 
 sudo nginx -t
 
 sudo systemctl reload nginx
+
+#stop the app if its running 
+pm2 stop app.js
 
 # Start the app using PM2
 pm2 start app.js
@@ -73,3 +89,5 @@ sudo systemctl enable pm2-ubuntu
 sudo systemctl reboot
 
 sudo npm start
+
+

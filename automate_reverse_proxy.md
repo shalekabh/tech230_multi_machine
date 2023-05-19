@@ -88,7 +88,7 @@ Test the file by running it ```./provisions-app.sh```
 
 If there are no errors then the script runs correctly (you may have to run it with sudo)
 
-The script below is the reverse proxy
+The script below is the reverse proxy:
 
 ```sudo bash -c 'cat <<EOF > /etc/nginx/sites-available/default
 server {
@@ -114,7 +114,7 @@ server {
         proxy_cache_bypass \$http_upgrade;
     }
 }
-EOF'```
+EOF' ```
 
 ```sudo bash -c 'cat <<EOF > /etc/nginx/sites-available/default```
 
@@ -124,6 +124,11 @@ sudo: Executes the subsequent command with superuser (root) privileges.
 
 ```cat <<EOF > /etc/nginx/sites-available/default``` command is using a "Here Document" syntax in Bash. It allows you to input multiple lines of text into a command and redirect it to a file. In this case, the content between <<EOF and EOF is the input, and it will be written to the ```/etc/nginx/sites-available/default file. EOF = "End OF File"```
 
+A simplified way of doing the same thing is using the sed command:
+
+```sudo sed -i 's@try_files $uri $uri/=404;@location /posts {\n    proxy_pass http://localhost:3000/posts;\n}\n\n    location / {\n        proxy_pass http://localhost:3000;\n    }@g' /etc/nginx/sites-available/default ```
+
+@: The delimiter character used in the sed command. In this case, @ is used as an alternative to the more commonly used / delimiter. It avoids conflicts with forward slashes in the pattern and replacement text.
 
 Now we do the same for the database without the revesrse proxy.
 
@@ -142,3 +147,18 @@ The code is as follows :
 ```sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf``` - this overwrites the bind ip to what we need
 ```sudo systemctl restart mongod```
 ```sudo systemctl enable mongod```
+
+### Automate environment variable
+
+Add this to your provisions-app.sh:
+
+```echo 'export DB_HOST=mongodb://192.168.10.150:27017/posts' >> ~/.bashrc``` - This uses ```echo``` to repeat what has and ```>>``` means append whatever has bee written to the .bashrc file.
+
+Refresh the file to implement changes:
+
+```source ~/.bashrc```
+
+
+### Automate Bind ip
+
+```sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf``` - This uses ```sed``` which means stream editor and is used for text manipulation. ```i``` is an option for ```sed``` and means it will directly modify the file. ```'s``` means substitution. ```g'``` is the global flag. The numbers before the / are to be replaced witht the numbers after the /.
