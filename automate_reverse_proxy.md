@@ -130,6 +130,12 @@ A simplified way of doing the same thing is using the sed command:
 
 @: The delimiter character used in the sed command. In this case, @ is used as an alternative to the more commonly used / delimiter. It avoids conflicts with forward slashes in the pattern and replacement text.
 
+```location /posts {\n proxy_pass http://localhost:3000/posts;\n}\n\n location / {\n proxy_pass http://localhost:3000;\n }```: This is the replacement text. It consists of multiple lines representing the desired NGINX configuration.
+
+```location /posts {\n proxy_pass http://localhost:3000/posts;\n}```: It defines the new location block for /posts. The proxy_pass directive is set to ```http://localhost:3000/posts```, ensuring that requests to /posts are proxied to ```http://localhost:3000/posts```.
+
+```location / {\n proxy_pass http://localhost:3000;\n}```: It defines the existing location block for /. The proxy_pass directive is set to ```http://localhost:3000```, which proxies all other requests to ```http://localhost:3000```.
+
 Now we do the same for the database without the revesrse proxy.
 
 The code is as follows :
@@ -153,6 +159,8 @@ The code is as follows :
 Add this to your provisions-app.sh:
 
 ```echo 'export DB_HOST=mongodb://192.168.10.150:27017/posts' >> ~/.bashrc``` - This uses ```echo``` to repeat what has and ```>>``` means append whatever has bee written to the .bashrc file.
+
+make sure the IP is your mongodb current IP.
 
 Refresh the file to implement changes:
 
