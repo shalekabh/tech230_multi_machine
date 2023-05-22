@@ -57,23 +57,23 @@ sudo systemctl enable ngix
 
 # install app dependencies
 
-sudo apt-get install python-software-properties
+```sudo apt-get install python-software-properties```
 
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+```curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -```
 
-sudo apt-get install nodejs -y
+```sudo apt-get install nodejs -y```
 
-cd app
+```cd app```
 
-sudo apt-get install npm
+```sudo apt-get install npm```
 
-npm install
+```npm install```
 
-sudo npm install pm2 -g
+```sudo npm install pm2 -g```
 
-node seeds/seed.js
+```node seeds/seed.js```
 
-pm2 start app.js --update-env
+```pm2 start app.js --update-env```
 
 
 
@@ -90,7 +90,8 @@ If there are no errors then the script runs correctly (you may have to run it wi
 
 The script below is the reverse proxy:
 
-```sudo bash -c 'cat <<EOF > /etc/nginx/sites-available/default
+```
+sudo bash -c 'cat <<EOF > /etc/nginx/sites-available/default
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
@@ -114,7 +115,8 @@ server {
         proxy_cache_bypass \$http_upgrade;
     }
 }
-EOF' ```
+EOF' 
+```
 
 ```sudo bash -c 'cat <<EOF > /etc/nginx/sites-available/default```
 
@@ -122,19 +124,26 @@ sudo: Executes the subsequent command with superuser (root) privileges.
 
 ```bash -c '...'```: Starts a new Bash shell and executes the given command(s) within it.
 
-```cat <<EOF > /etc/nginx/sites-available/default``` command is using a "Here Document" syntax in Bash. It allows you to input multiple lines of text into a command and redirect it to a file. In this case, the content between <<EOF and EOF is the input, and it will be written to the ```/etc/nginx/sites-available/default file. EOF = "End OF File"```
+```
+cat <<EOF > /etc/nginx/sites-available/default``` command is using a "Here Document" syntax in Bash. It allows you to input multiple lines of text into a command and redirect it to a file. In this case, the content between <<EOF and EOF is the input, and it will be written to the ```/etc/nginx/sites-available/default file. EOF = "End OF File"
+```
+
 
 A simplified way of doing the same thing is using the sed command:
 
-```sudo sed -i 's@try_files $uri $uri/=404;@location /posts {\n    proxy_pass http://localhost:3000/posts;\n}\n\n    location / {\n        proxy_pass http://localhost:3000;\n    }@g' /etc/nginx/sites-available/default ```
+```
+sudo sed -i 's@try_files $uri $uri/=404;@location /posts {\n    proxy_pass http://localhost:3000/posts;\n}\n\n    location / {\n        proxy_pass http://localhost:3000;\n    }@g' /etc/nginx/sites-available/default 
+```
+
 
 @: The delimiter character used in the sed command. In this case, @ is used as an alternative to the more commonly used / delimiter. It avoids conflicts with forward slashes in the pattern and replacement text.
 
-```location /posts {\n proxy_pass http://localhost:3000/posts;\n}\n\n location / {\n proxy_pass http://localhost:3000;\n }```: This is the replacement text. It consists of multiple lines representing the desired NGINX configuration.
+```location /posts {\n proxy_pass http://localhost:3000/posts;\n}\n\n location / {\n proxy_pass http://localhost:3000;\n }```: This is the replacement text. It consists of multiple lines representing the desired NGINX configuration
 
 ```location /posts {\n proxy_pass http://localhost:3000/posts;\n}```: It defines the new location block for /posts. The proxy_pass directive is set to ```http://localhost:3000/posts```, ensuring that requests to /posts are proxied to ```http://localhost:3000/posts```.
 
-```location / {\n proxy_pass http://localhost:3000;\n}```: It defines the existing location block for /. The proxy_pass directive is set to ```http://localhost:3000```, which proxies all other requests to ```http://localhost:3000```.
+
+```location / {\n proxy_pass http://localhost:3000;\n}```: It defines the existing location block for /. The proxy_pass directive is set to ```http://localhost:3000```, which proxies all other requests to ```http://localhost:3000```
 
 Now we do the same for the database without the revesrse proxy.
 
@@ -170,3 +179,10 @@ Refresh the file to implement changes:
 ### Automate Bind ip
 
 ```sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf``` - This uses ```sed``` which means stream editor and is used for text manipulation. ```i``` is an option for ```sed``` and means it will directly modify the file. ```'s``` means substitution. ```g'``` is the global flag. The numbers before the / are to be replaced witht the numbers after the /.
+
+### Automate app folder copying to instance
+
+Clone your repo into the vm using:
+
+```git clone https://github.com/shalekabh/app.git```
+

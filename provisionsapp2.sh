@@ -39,6 +39,7 @@ source ~/.bashrc
 
 # Configure nginx
 
+#sudo sed -s "s+try_files $uri $uri/=404+proxy_pass httpe://localhost:3000;@g"
 #sudo sed -i 's@try_files $uri $uri/=404;@proxy_pass http://localhost:3000;@g' /etc/nginx/sites-available/default
 sudo sed -i 's@try_files $uri $uri/=404;@location /posts {\n    proxy_pass http://localhost:3000/posts;\n}\n\n    location / {\n        proxy_pass http://localhost:3000;\n    }@g' /etc/nginx/sites-available/default
 
@@ -90,4 +91,36 @@ sudo systemctl reboot
 
 sudo npm start
 
+
+
+
+
+
+
+
+# sudo apt-get update -y
+# sudo apt-get upgrade -y
+# sudo apt-get install nginx -y
+# sudo apt install sed -y
+# sudo apt install git
+# echo 'export DB_HOST=mongodb://18.203.95.206:27017/posts' >> ~/.bashrc
+# source .bashrc
+# sudo sed -i 's@try_files $uri $uri/=404;@location /posts {\n    proxy_pass http://localhost:3000/posts;\n}\n\n    location / {\n        proxy_pass http://localhost:3000;\n    }@g' /etc/nginx/sites-available/default
+# sudo systemctl start nginx
+# sudo systemctl enable nginx
+# sudo apt-get install -y git
+# sudo apt-get install -y python-software-properties
+# curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+# sudo apt-get install -y nodejs
+# git clone https://github.com/shalekabh/app.git
+# cd app
+# sudo apt-get install -y npm
+# sudo npm install
+# sudo npm install -g pm2
+# sudo nginx -t
+# sudo systemctl restart nginx
+# sudo systemctl enbale nginx
+# node seeds/seed.js
+# pm2 stop app.js
+# pm2 start app.js --update-env
 
